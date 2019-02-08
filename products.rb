@@ -1,18 +1,43 @@
-# Open CSV with products from ePosNow and generate "canonical" products from them
+# Load JSON with products from WooCommerce and map them to canonical products
 
 require "csv"
+require "json"
 
-pwd = File.expand_path(File.dirname(__FILE__))
+PWD = File.expand_path(File.dirname(__FILE__))
 
-CSV.open(File.join(pwd, "data", "products.csv"), "w") do |output|
-  output << %w(name price eposnow_name eposnow_category)
+$:.unshift(PWD)
 
-  CSV.foreach(File.join(pwd, "data", "epos_now_products.csv"), headers: true, encoding: "utf-8") do |row|
-    output << [
-      row["\uFEFFName"],
-      row["Sale Price (Inc. Tax)"],
-      row["\uFEFFName"],
-      row["Category"],
-    ]
+require "lib/product"
+require "lib/product_repository"
+require "lib/word_matcher"
+require "lib/woo_commerce"
+
+products = ProductRepository.new(CSV.open(File.join(PWD, "data", "products.csv"), headers: true))
+
+wc_products = WooCommerce::Product.map(JSON.parse(File.read(File.join(PWD, "data", "wc_products.json")))["products"])
+used_products = []
+
+name_matcher = WordMatcher.new(wc_products.map { |product| [product.name, product] }.to_h)
+
+puts Product::HEADERS.to_csv
+
+products.each do |product|
+  matches = name_matcher.find_matches(product.name)
+
+  output = if matches.any?
+    matches = Array(
+      matches.find(&:full?) || matches.select { |m| m.score == matches.first.score }
+    )
+    used_products += matches.map(&:value)
+    product.add_woocommerce_data(WooCommerce::Products.new(matches.map(&:value)))
+  else
+
+    product
   end
+
+  puts output.to_csv
+end
+
+(wc_products - used_products).each do |product|
+  puts Product.new({}).add_woocommerce_data(product).to_csv
 end
