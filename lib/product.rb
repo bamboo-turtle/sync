@@ -1,5 +1,5 @@
 class Product
-  HEADERS = %w(name price eposnow_name eposnow_category woocommerce_id woocommerce_name)
+  HEADERS = %w(name variant price eposnow_name eposnow_category woocommerce_id woocommerce_name)
 
   def initialize(data)
     if (data.keys - HEADERS).any?
@@ -11,6 +11,20 @@ class Product
 
   def name
     @data.fetch("name")
+  end
+
+  def price
+    if value = @data.fetch("price")
+      value.to_f
+    end
+  end
+
+  def woocommerce_id
+    @data.fetch("woocommerce_id")
+  end
+
+  def woocommerce_name
+    @data.fetch("woocommerce_name")
   end
 
   def add_woocommerce_data(wc_product)

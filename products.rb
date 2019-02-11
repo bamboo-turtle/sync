@@ -1,8 +1,5 @@
 # Load JSON with products from WooCommerce and map them to canonical products
 
-require "csv"
-require "json"
-
 PWD = File.expand_path(File.dirname(__FILE__))
 
 $:.unshift(PWD)
@@ -12,9 +9,8 @@ require "lib/product_repository"
 require "lib/word_matcher"
 require "lib/woo_commerce"
 
-products = ProductRepository.new(CSV.open(File.join(PWD, "data", "products.csv"), headers: true))
-
-wc_products = WooCommerce::Product.map(JSON.parse(File.read(File.join(PWD, "data", "wc_products.json")))["products"])
+products = ProductRepository.from_csv(File.join(PWD, "data", "products.csv"))
+wc_products = WooCommerce::Product.from_json(File.join(PWD, "data", "wc_products.json"))
 used_products = []
 
 name_matcher = WordMatcher.new(wc_products.map { |product| [product.name, product] }.to_h)

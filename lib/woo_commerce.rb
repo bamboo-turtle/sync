@@ -1,5 +1,11 @@
+require "json"
+
 module WooCommerce
   class Product
+    def self.from_json(filename)
+      map(JSON.parse(File.read(filename))["products"])
+    end
+
     def self.map(data)
       data.flat_map { |item|
         product = Product.new(item)
@@ -17,7 +23,7 @@ module WooCommerce
     end
 
     def id
-      @data.fetch("id")
+      @data.fetch("id").to_s
     end
 
     def name
@@ -30,6 +36,12 @@ module WooCommerce
 
     def variable?
       @data.fetch("type") == "variable"
+    end
+
+    def price
+      unless (value = @data.fetch("price")) == ""
+        value.to_f
+      end
     end
 
     def variants
@@ -55,6 +67,12 @@ module WooCommerce
 
     def categories
       @product.categories
+    end
+
+    def price
+      unless (value = @data.fetch("price")) == ""
+        value.to_f
+      end
     end
 
     private
