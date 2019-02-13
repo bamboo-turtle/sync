@@ -1,5 +1,5 @@
 class Product
-  HEADERS = %w(name variant short_description long_description price images eposnow_name eposnow_category woocommerce_id woocommerce_name woocommerce_categories)
+  HEADERS = %w(name variant short_description long_description price images cup_weight eposnow_name eposnow_category woocommerce_id woocommerce_name woocommerce_categories)
 
   def self.prettify_name(name)
     return if name.nil?
@@ -10,6 +10,12 @@ class Product
       .strip
       .downcase
       .capitalize
+  end
+
+  def self.extract_cup_weight(text)
+    return if text.nil? || text.strip == ""
+    weight = text[/cup\D+(\d+)\s?g/i, 1]
+    weight && weight.to_i
   end
 
   def initialize(data)
@@ -26,6 +32,14 @@ class Product
 
   def variant
     @data.fetch("variant")
+  end
+
+  def short_description
+    @data.fetch("short_description")
+  end
+
+  def long_description
+    @data.fetch("long_description")
   end
 
   def price

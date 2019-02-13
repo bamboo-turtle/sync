@@ -3,6 +3,7 @@ $:.unshift(Dir.pwd)
 require "lib/product"
 require "lib/product_repository"
 require "lib/woo_commerce"
+require "lib/product_processor"
 
 desc "Add WooCommerce details to canonical products"
 task :add_wc_info do
@@ -34,5 +35,17 @@ task :prettify_products do
       "name" => Product.prettify_name(product.name),
       "variant" => Product.prettify_name(product.variant)
     ).to_csv
+  end
+end
+
+desc "Populate cup weight from description"
+task :populate_cup_weight do
+  ProductProcessor.perform do |product|
+    product.update(
+      "cup_weight" => [
+        Product.extract_cup_weight(product.short_description),
+        Product.extract_cup_weight(product.long_description)
+      ].compact.first
+    )
   end
 end
