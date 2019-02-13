@@ -23,3 +23,16 @@ task :add_wc_info do
     puts product.to_csv
   end
 end
+
+desc "Prettify product names"
+task :prettify_products do
+  products =  ProductRepository.from_csv(File.join("data", "products.csv"))
+  puts Product::HEADERS.to_csv
+
+  products.each do |product|
+    puts product.update(
+      "name" => Product.prettify_name(product.name),
+      "variant" => Product.prettify_name(product.variant)
+    ).to_csv
+  end
+end

@@ -1,14 +1,14 @@
 name,variant,short_description,long_description,price,images,eposnow_name,eposnow_category,woocommerce_id,woocommerce_name,woocommerce_categories
-Ginger- ground,,,,0.0127,,Ginger- ground,spices,,,
+Ginger ground,,,,0.0127,,Ginger- ground,spices,,,
 Mustard seed ground,,,,0.0102,,Mustard seed ground,spices,,,
-Mustard seeds- yellow,,,,0.0053,,Mustard seeds- yellow,spices,,,
+Mustard seeds yellow,,,,0.0053,,Mustard seeds- yellow,spices,,,
 Paprika,,,,0.0106,,Paprika,spices,,,
-Paprika- smoked,,,,0.0131,,Paprika- smoked,spices,,,
+Paprika smoked,,,,0.0131,,Paprika- smoked,spices,,,
 Turmeric,,,,0.0134,,Turmeric,spices,,,
 Mixed spices,,,,0.0156,,Mixed spices,spices,,,
 Ground white pepper,,,,0.0472,,Ground white pepper,spices,,,
-Nutmeg- ground,,,,0.0539,,Nutmeg- ground,spices,,,
-Nutmeg- whole,,,,0.048,,Nutmeg- whole,spices,,,
+Nutmeg ground,,,,0.0539,,Nutmeg- ground,spices,,,
+Nutmeg whole,,,,0.048,,Nutmeg- whole,spices,,,
 Basil,,,,0.0093,,Basil,herbs,,,
 Bay leaves,,,,0.0156,,Bay leaves,herbs,,,
 Mixed herbs,,,,0.0117,,Mixed herbs,herbs,,,
@@ -20,8 +20,8 @@ Thyme,,,,0.02,,Thyme,herbs,,,
 Dill,,,,0.018,,Dill,herbs,,,
 Aniseed,,,,0.0266,,Aniseed,herbs,,,
 Marjoram,,,,0.003,,Marjoram,herbs,,,
-mint,,,,0.009,,mint,herbs,,,
-muesli deluxe,,"<p>1 cup = 206g</p>
+Mint,,,,0.009,,mint,herbs,,,
+Muesli deluxe,,"<p>1 cup = 206g</p>
 ","<p>INGREDIENTS: <b>oats</b>*, sultanas* (with sunflower oil*), malted wheat flakes* (wheat, <b>barley malt</b> extract), <b>barley</b> flakes*, wheat flakes*, <b>sunflower seeds</b>*, chopped apricots (with rice flour*), chopped dates* (with rice flour*), <b>hazelnuts</b>*, desiccated coconut* <b>almonds</b>*, cardamom*. * denotes organically grown ingredients.</p>
 <h5><b><i>Typical composition per 100g </i></b></h5>
 <p>....<b>energy kJ</b>..................... 1553 kJ<br />
@@ -35,11 +35,11 @@ muesli deluxe,,"<p>1 cup = 206g</p>
 ....<b>sodium</b>.......................... 0.012g<br />
 ....<b>salt</b>................................. 0.03g</p>
 ",0.00576,https://i2.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG04551.jpg,muesli deluxe,cereal,220,MUESLI DE LUXE - organic,CEREAL
-bran flakes,,"<p>1 cup = 85 g</p>
+Bran flakes,,"<p>1 cup = 85 g</p>
 ","<p>INGREDIENTS:</p>
 <p>Wholewheat flour (90%), Wheat bran (5%),Maize Glucose, Barley Malt, Sea salt</p>
 ",0.0078,https://i2.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG04531.jpg,bran flakes,cereal,278,BRAN FLAKES organic,CEREAL
-Organic oats ,,"<p><b><i>1 Cup of oats = 196 g </i></b></p>
+Organic oats,,"<p><b><i>1 Cup of oats = 196 g </i></b></p>
 <p>&nbsp;</p>
 ","<h5><b><i>Typical composition per 100g </i></b></h5>
 <p>....<b>energy kJ</b>..................... 1444 kJ<br />
@@ -53,7 +53,7 @@ Organic oats ,,"<p><b><i>1 Cup of oats = 196 g </i></b></p>
 ....<b>sodium</b>.......................... 0.001g<br />
 ....<b>salt</b>................................. 0.0025g</p>
 ",0.0026,https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG04561.jpg,Organic oats ,cereal,270,Oats - porridge organic,CEREAL
-almonds,,"<p>1 cup of almonds = 400 g</p>
+Almonds,,"<p>1 cup of almonds = 400 g</p>
 ","<table style=""height: 25px;"" width=""60"">
 <tbody>
 <tr>
@@ -83,7 +83,7 @@ almonds,,"<p>1 cup of almonds = 400 g</p>
 </tbody>
 </table>
 ",0.02,https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG0484.jpg,almonds,nuts & seeds,224,Almonds,NUTS &amp; SEEDS
-cashews,,"<p>1 cup of cashews = 400g</p>
+Cashews,,"<p>1 cup of cashews = 400g</p>
 ","<h5><b><i>Typical composition per 100g </i></b></h5>
 <p>....<b>energy kJ</b>..................... 2406 kJ<br />
 ....<b>energy kCal</b>................. 575 kCal<br />
@@ -96,10 +96,10 @@ cashews,,"<p>1 cup of cashews = 400g</p>
 ....<b>sodium</b>.......................... 0.011g<br />
 ....<b>salt</b>................................. 0.0275g</p>
 ",0.029,https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG0483.jpg,cashews,nuts & seeds,271,Cashew - whole  - organic,NUTS &amp; SEEDS
-hazel,,,,0.0254,,hazel,nuts & seeds,,,
-pine nuts,,,,0.0355,,pine nuts,nuts & seeds,,,
-peanuts,,,,0.0076,,peanuts,nuts & seeds,,,
-seed mix,,"<p>1 cup of mixed nuts = 350g</p>
+Hazel,,,,0.0254,,hazel,nuts & seeds,,,
+Pine nuts,,,,0.0355,,pine nuts,nuts & seeds,,,
+Peanuts,,,,0.0076,,peanuts,nuts & seeds,,,
+Seed mix,,"<p>1 cup of mixed nuts = 350g</p>
 ","<p>Ingredients:</p>
 <p><b>peanuts</b>, <b>almonds</b>, <b>walnuts</b></p>
 <p>Nutritional Information</p>
@@ -115,10 +115,10 @@ seed mix,,"<p>1 cup of mixed nuts = 350g</p>
 ....<b>sodium</b>.......................... 0.001g<br />
 ....<b>salt</b>................................. 0.0025g</p>
 ",0.011,https://i2.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG0488.jpg,seed mix,nuts & seeds,268,Mixed seeds,NUTS &amp; SEEDS
-sunflower,,,,0.0045,,sunflower,nuts & seeds,,,
-pumpkin,,"<p>1 cup of pumpkin seeds = 360g</p>
+Sunflower,,,,0.0045,,sunflower,nuts & seeds,,,
+Pumpkin,,"<p>1 cup of pumpkin seeds = 360g</p>
 ",,0.011,https://i2.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/05/IMAG04911.jpg,pumpkin,nuts & seeds,418,Pumpkin seeds,NUTS &amp; SEEDS
-coconut chips,,"<p>1 cup = 80g</p>
+Coconut chips,,"<p>1 cup = 80g</p>
 ","<h5><b><i>Typical composition per 100g </i></b></h5>
 <p>....<b>energy kJ</b>..................... 2528 kJ<br />
 ....<b>energy kCal</b>................. 604 kCal<br />
@@ -131,11 +131,11 @@ coconut chips,,"<p>1 cup = 80g</p>
 ....<b>sodium</b>.......................... 0.028g<br />
 ....<b>salt</b>................................. 0.07g</p>
 ",0.008,https://i2.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/05/IMAG0430.jpg,coconut chips,baking,383,Coconut chips,BAKING
-couscous,,"<p>1 cup = 360g</p>
+Couscous,,"<p>1 cup = 360g</p>
 ",,0.0055,https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG0420.jpg,couscous,grains & beans ,276,COUS COUS,GRAINS
-quinoa,,"<p>1 cup = 280g</p>
+Quinoa,,"<p>1 cup = 280g</p>
 ",,0.0063,https://i2.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG04231.jpg,quinoa,grains & beans ,277,WHITE QUINOA organic,GRAINS
-lentils red,,"<p>1 cup = 320g</p>
+Lentils red,,"<p>1 cup = 320g</p>
 ","<p>&nbsp;</p>
 <p>For inspiration:</p>
 <p><a href=""http://bambooturtle.co.uk/spicy-lentil-chickpea-soup"">Spicy Lentil &amp; Chickpea Soup</a></p>
@@ -152,7 +152,7 @@ lentils red,,"<p>1 cup = 320g</p>
 ....<b>salt</b>................................. 0.09g</p>
 <p>&nbsp;</p>
 ",0.0025,https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG04261.jpg,lentils red,grains & beans ,275,Lentils - red,BEANS &amp; PULSES
-lentils green,,"<p>1 cup = 385g</p>
+Lentils green,,"<p>1 cup = 385g</p>
 ","<p>For inspiration:</p>
 <p><a href=""http://bambooturtle.co.uk/summer-shepherds-pie"" target=""_blank"" rel=""noopener"">Summer Shepherd`s Pie</a></p>
 <h5><b><i>Typical composition per 100g </i></b></h5>
@@ -168,13 +168,13 @@ lentils green,,"<p>1 cup = 385g</p>
 ....<b>salt</b>................................. 0.03g</p>
 <p>&nbsp;</p>
 ",0.003,https://i2.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG04221.jpg,lentils green,grains & beans ,309,Green Lentils,BEANS &amp; PULSES
-aduki,,"<p>ORGANIC</p>
+Aduki,,"<p>ORGANIC</p>
 <p>1 large cup equals 390 g</p>
 <p>&nbsp;</p>
 ",,0.0046,https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG0405-e1524042581958.jpg,aduki,grains & beans ,279,ADUKI BEANS organic,BEANS &amp; PULSES
-red kidney beans ,,"<p>1 cup = 320g</p>
+Red kidney beans,,"<p>1 cup = 320g</p>
 ",,0.005,https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG04171.jpg,red kidney beans ,grains & beans ,307,Red Kidney Beans,BEANS &amp; PULSES
-chickpeas,,"<p>1 cup of chickpeas equals 200 g .</p>
+Chickpeas,,"<p>1 cup of chickpeas equals 200 g .</p>
 <p>There are a  few ways to work with dried chickpeas. But once you ve tried them &#8211; you ll never go back to tinned!</p>
 <ul>
 <li><strong> </strong>Long soak and simmer, about 10 hours or overnight plus 2 hours</li>
@@ -198,9 +198,9 @@ chickpeas,,"<p>1 cup of chickpeas equals 200 g .</p>
 ....<b>sodium</b>.......................... 0.036g<br />
 ....<b>salt</b>................................. 0.09g</p>
 ",0.0035,https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG04211.jpg,chickpeas,grains & beans ,308,Chickpeas,BEANS &amp; PULSES
-wheat grain,,,,0.003,,wheat grain,grains & beans ,,,
-chopped figs,,,,0.0061,,chopped figs,fruit,,,
-apricots whole,,"<p>1 cup =340g</p>
+Wheat grain,,,,0.003,,wheat grain,grains & beans ,,,
+Chopped figs,,,,0.0061,,chopped figs,fruit,,,
+Apricots whole,,"<p>1 cup =340g</p>
 ","<h5><b><i>Typical composition per 100g </i></b></h5>
 <p>....<b>energy kJ</b>..................... 1025 kJ<br />
 ....<b>energy kCal</b>................. 245 kCal<br />
@@ -216,12 +216,12 @@ apricots whole,,"<p>1 cup =340g</p>
 Black peppercorns,,,,0.0302,,Black peppercorns,spices,,,
 Cardamon seed whole,,,,0.053,,Cardamon seed whole,spices,,,
 Caraway seeds,,,,0.0154,,Caraway seeds,spices,,,
-Cardamon seed- ground,,,,0.053,,Cardamon seed- ground,spices,,,
+Cardamon seed ground,,,,0.053,,Cardamon seed- ground,spices,,,
 Chilli ground,,,,0.0114,,Chilli ground,spices,,,
 Ceylon cinnamon,,,,0.0167,,Ceylon cinnamon,spices,,,
 Cinnamon sticks,,,,0.0622,,Cinnamon sticks,spices,,,
-Cloves Whole,,,,0.042,,Cloves Whole,spices,,,
-Cloves Ground,,,,0.04,,Cloves Ground,spices,,,
+Cloves whole,,,,0.042,,Cloves Whole,spices,,,
+Cloves ground,,,,0.04,,Cloves Ground,spices,,,
 Coriander ground,,,,0.0084,,Coriander ground,spices,,,
 Coriander seeds,,,,0.0071,,Coriander seeds,spices,,,
 Cumin ground,,,,0.0154,,Cumin ground,spices,,,
@@ -229,9 +229,9 @@ Cumin seeds,,,,0.014,,Cumin seeds,spices,,,
 Curry powder,,,,0.0077,,Curry powder,spices,,,
 Fennel seeds,,,,0.0094,,Fennel seeds,spices,,,
 Fenugreek seed,,,,0.0039,,Fenugreek seed,spices,,,
-Garam Masala,,,,0.0144,,Garam Masala,spices,,,
-WASHING POWDER  ,,,,0.00455,,WASHING POWDER  ,washing,,,
-CHIA SEEDS ,,"<p>1 cup of chia seeds = 420g</p>
+Garam masala,,,,0.0144,,Garam Masala,spices,,,
+Washing powder,,,,0.00455,,WASHING POWDER  ,washing,,,
+Chia seeds,,"<p>1 cup of chia seeds = 420g</p>
 ","<h5><b><i>Typical composition per 100g </i></b></h5>
 <p>....<b>energy kJ</b>..................... 2402 kJ<br />
 ....<b>energy kCal</b>................. 574 kCal<br />
@@ -244,7 +244,7 @@ CHIA SEEDS ,,"<p>1 cup of chia seeds = 420g</p>
 ....<b>sodium</b>.......................... 0.020g<br />
 ....<b>salt</b>................................. 0.05g</p>
 ",0.0099,https://i2.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG0475.jpg,CHIA SEEDS ,nuts & seeds,267,Chia Seeds,NUTS &amp; SEEDS
-LINSEED ,,"<p>1 cup of flax seeds = 385g</p>
+Linseed,,"<p>1 cup of flax seeds = 385g</p>
 ","<h5><b><i>Typical composition per 100g </i></b></h5>
 <p>....<b>energy kJ</b>..................... 1858 kJ<br />
 ....<b>energy kCal</b>................. 444 kCal<br />
@@ -257,7 +257,7 @@ LINSEED ,,"<p>1 cup of flax seeds = 385g</p>
 ....<b>sodium</b>.......................... 0.024g<br />
 ....<b>salt</b>................................. 0.06g</p>
 ",0.0035,https://i2.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG0487-1.jpg,LINSEED ,nuts & seeds,266,Linseed / Flax,NUTS &amp; SEEDS
-FUSILI WHITE ,,"<p>1 cup = 160g</p>
+Fusili white,,"<p>1 cup = 160g</p>
 ","<h5><b><i>INGREDIENTS:</i></b></h5>
 <p>Italian durum <b>wheat</b> four*, water</p>
 <h5><b><i>Typical composition per 100g </i></b></h5>
@@ -272,7 +272,7 @@ FUSILI WHITE ,,"<p>1 cup = 160g</p>
 ....<b>sodium</b>.......................... Not specified<br />
 ....<b>salt</b>................................. Not specified</p>
 ",0.0033,https://i2.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG04571.jpg,FUSILI WHITE ,pasta & rice,265,Fusilli Organic White,RICE &amp; PASTA
-PENNE WHITE ,,"<p>1 cup = 180g</p>
+Penne white,,"<p>1 cup = 180g</p>
 ","<h5><b><i>INGREDIENTS:</i></b></h5>
 <h5><b><i>Italian durum wheat four*, water. </i></b></h5>
 <h5><b><i>Typical composition per 100g </i></b></h5>
@@ -287,7 +287,7 @@ PENNE WHITE ,,"<p>1 cup = 180g</p>
 ....<b>sodium</b>.......................... Not specified<br />
 ....<b>salt</b>................................. Not specified</p>
 ",0.0033,https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG04581-1.jpg,PENNE WHITE ,pasta & rice,264,Penne Organic White,RICE &amp; PASTA
-RISOTTO RICE ,,"<p>1 cup = 380 g</p>
+Risotto rice,,"<p>1 cup = 380 g</p>
 ","<h5><b><i>Typical composition per 100g </i></b></h5>
 <p>....<b>energy kJ</b>..................... 1448 kJ<br />
 ....<b>energy kCal</b>................. 346 kCal<br />
@@ -300,7 +300,7 @@ RISOTTO RICE ,,"<p>1 cup = 380 g</p>
 ....<b>sodium</b>.......................... 0.005g<br />
 ....<b>salt</b>................................. 0.0125g</p>
 ",0.004,https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG04151.jpg,RISOTTO RICE ,pasta & rice,263,Rice - Arborio (risotto),RICE &amp; PASTA
-WHITE BASMATI RICE G,,"<p>1 cup = 344 g</p>
+White basmati rice g,,"<p>1 cup = 344 g</p>
 ","<h5><b><i>Typical composition per 100g </i></b></h5>
 <p>....<b>energy kJ</b>..................... 1473 kJ<br />
 ....<b>energy kCal</b>................. 352 kCal<br />
@@ -313,9 +313,9 @@ WHITE BASMATI RICE G,,"<p>1 cup = 344 g</p>
 ....<b>sodium</b>.......................... 0.005g<br />
 ....<b>salt</b>................................. 0.0125g</p>
 ",0.0035,https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG04591.jpg,WHITE BASMATI RICE G,pasta & rice,259,"Rice - basmati, white",RICE &amp; PASTA
-brown RICE wholewheat,,"<p>1 cup = 330g</p>
+Brown rice wholewheat,,"<p>1 cup = 330g</p>
 ",,0.0035,https://i2.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG04131.jpg,brown RICE wholewheat,pasta & rice,255,long grain brown  rice,RICE &amp; PASTA
- COCONUT SUGAR ,,"<p>1 cup = 240g</p>
+Coconut sugar,,"<p>1 cup = 240g</p>
 ","<h5><b><i>Typical composition per 100g </i></b></h5>
 <p>....<b>energy kJ</b>..................... 1594 kJ<br />
 ....<b>energy kCal</b>................. 381 kCal<br />
@@ -328,7 +328,7 @@ brown RICE wholewheat,,"<p>1 cup = 330g</p>
 ....<b>sodium</b>.......................... Not specified<br />
 ....<b>salt</b>................................. Not specified</p>
 ",0.0129,https://i2.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG0429.jpg, COCONUT SUGAR ,baking,260,"Coconut Palm Sugar, Organic",BAKING
-GOLDEN SUGAR,,"<p>1 cup = 410 g</p>
+Golden sugar,,"<p>1 cup = 410 g</p>
 ","<h5><b><i>Typical composition per 100g </i></b></h5>
 <p>....<b>energy kJ</b>..................... 1674 kJ<br />
 ....<b>energy kCal</b>................. 400 kCal<br />
@@ -341,7 +341,7 @@ GOLDEN SUGAR,,"<p>1 cup = 410 g</p>
 ....<b>sodium</b>.......................... 0.000g<br />
 ....<b>salt</b>................................. 0g</p>
 ",0.0025,https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG0432.jpg,GOLDEN SUGAR,baking,261,Fairtrade Golden Granulated sugar,BAKING
-DEMERARA SUGAR,,"<h5><i>1 cup = 380g </i></h5>
+Demerara sugar,,"<h5><i>1 cup = 380g </i></h5>
 <p>&nbsp;</p>
 ","<h5><b><i>Typical composition per 100g </i></b></h5>
 <p>....<b>energy kJ</b>..................... 1666 kJ<br />
@@ -355,7 +355,7 @@ DEMERARA SUGAR,,"<h5><i>1 cup = 380g </i></h5>
 ....<b>sodium</b>.......................... 0.000g<br />
 ....<b>salt</b>................................. 0g</p>
 ",0.0061,https://i2.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG0428.jpg,DEMERARA SUGAR,baking,262,Demerara Sugar,BAKING
- COCONUT FLOUR  ,,"<p>1 cup = 210g</p>
+Coconut flour,,"<p>1 cup = 210g</p>
 ","<h5><b><i>Typical composition per 100g </i></b></h5>
 <p>....<b>energy kJ</b>..................... 1423 kJ<br />
 ....<b>energy kCal</b>................. 340 kCal<br />
@@ -368,10 +368,10 @@ DEMERARA SUGAR,,"<h5><i>1 cup = 380g </i></h5>
 ....<b>sodium</b>.......................... 0.200g<br />
 ....<b>salt</b>................................. 0.5g</p>
 ",0.007,https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG04371.jpg, COCONUT FLOUR  ,baking,258,"Coconut Flour, Organic",BAKING
-Stotfold mill PLAIN WHITE flour,,,,0.0025,,Stotfold mill PLAIN WHITE flour,baking,,,
-SELF RAISING flour,,,,0.0025,,SELF RAISING flour,baking,,,
-SEA SALT ,,,,0.0025,,SEA SALT ,baking,,,
-APPLE RINGS ,,"<p>1 cup = 100g</p>
+Stotfold mill plain white flour,,,,0.0025,,Stotfold mill PLAIN WHITE flour,baking,,,
+Self raising flour,,,,0.0025,,SELF RAISING flour,baking,,,
+Sea salt,,,,0.0025,,SEA SALT ,baking,,,
+Apple rings,,"<p>1 cup = 100g</p>
 ","<h5>Dried apple rings, preservative e220 (<b>sulphur dioxide</b>).</h5>
 <h5></h5>
 <h5><b><i>Typical composition per 100g </i></b></h5>
@@ -386,7 +386,7 @@ APPLE RINGS ,,"<p>1 cup = 100g</p>
 ....<b>sodium</b>.......................... 0.087g<br />
 ....<b>salt</b>................................. 0.2175g</p>
 ",0.0069,https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG0470.jpg,APPLE RINGS ,fruit,250,dried apple rings,DRIED FRUIT
-APRICOTS CHOPPED ,,"<p>1 cup = 160g</p>
+Apricots chopped,,"<p>1 cup = 160g</p>
 ","<h5><b><i>Typical composition per 100g </i></b></h5>
 <p>....<b>energy kJ</b>..................... 648 kJ<br />
 ....<b>energy kCal</b>................. 155 kCal<br />
@@ -394,17 +394,17 @@ APRICOTS CHOPPED ,,"<p>1 cup = 160g</p>
 ....<b>carbohydrates</b>............ 36.50g<br />
 ........<b>of which sugars</b>..... 36.50g</p>
 ",0.0061,https://i2.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG0464.jpg,APRICOTS CHOPPED ,fruit,257,chopped apricots,DRIED FRUIT
-BANANA CHIPS ,,"<p>1 cup = 150 g</p>
+Banana chips,,"<p>1 cup = 150 g</p>
 ",,0.0065,https://i2.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG0465.jpg,BANANA CHIPS ,fruit,251,banana chips,DRIED FRUIT
-DATES ,,"<p>1 cup = 270 g</p>
+Dates,,"<p>1 cup = 270 g</p>
 ",,0.0049,https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG0462.jpg,DATES ,fruit,252,dates chopped,DRIED FRUIT
-PRUNES -,,"<p>1 cup = 350 g</p>
+Prunes,,"<p>1 cup = 350 g</p>
 ",,0.0065,https://i2.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG0471-1.jpg,PRUNES -,fruit,253,prunes,DRIED FRUIT
- raisins,,"<p>1 cup = 260 g</p>
+Raisins,,"<p>1 cup = 260 g</p>
 ",,0.0065,https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG0467.jpg, raisins,fruit,254,raisins flame,DRIED FRUIT
-chillys brush,,,,6.5,,chillys brush,chilly,,,
-chilly s bottle,,,,20,,chilly s bottle,chilly,,,
-ecoffee cup SMALL,,"<p>&nbsp;</p>
+Chillys brush,,,,6.5,,chillys brush,chilly,,,
+Chilly s bottle,,,,20,,chilly s bottle,chilly,,,
+Ecoffee cup small,,"<p>&nbsp;</p>
 <p>Very few people know it, but 2017 marks a somewhat dubious 30th anniversary: that of the modern single-use “paper” cup. In three short decades, we estimate over 2 trillion of them have ended up in landfill – oh, in case you’re wondering, that’s 2,000,000,000,000.</p>
 <p>The average lifespan of a single-use cup is 13 minutes – and due to their plastic content less than 1% get recycled.</p>
 <p>So, in what could only be described as the understatement of the century, we felt there was an appetite for change! We passionately maintain that recycling is not the answer; instead, we can only institute real change with your help. In this enlightened era, there really is no excuse for single-use. That’s why we created Ecoffee Cup.</p>
@@ -414,8 +414,8 @@ ecoffee cup SMALL,,"<p>&nbsp;</p>
 <p>Available in a wide range of fun, contemporary patterns; bright, vibrant colours or classic prints – there’s one to suit your style, wardrobe or mood. That’s why we think Ecoffee Cup packs just a little bit more style than its plastic, ceramic or stainless steel cousins.</p>
 <p>Ecoffee Cup. Have Fun. Do Good.</p>
 ",8.5,https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/02/ecoffee639877_o.png,ecoffee cup SMALL,kitchen,141,Ecoffee cup - small,KITCHEN
-tea strainer,,,,4.5,http://bambooturtle.co.uk/wp-content/plugins/woocommerce/assets/images/placeholder.png,tea strainer,kitchen,646,tea infuser,Uncategorized
-bamboo straw,single,,"<p><span class=""a-list-item""> Plastic straws are one of the most vile creatures in the single use plastic family! Seemingly harmless and small these are actually an example of colossal waste generated for the most inconsequential convenience as we urbanites have come to expect plastic straws in almost all drinks. We ve all seen the pic of the turtle with a straw stuck up it s nose - but there is now an altenative.<br />
+Tea strainer,,,,4.5,http://bambooturtle.co.uk/wp-content/plugins/woocommerce/assets/images/placeholder.png,tea strainer,kitchen,646,tea infuser,Uncategorized
+Bamboo straw,Single,,"<p><span class=""a-list-item""> Plastic straws are one of the most vile creatures in the single use plastic family! Seemingly harmless and small these are actually an example of colossal waste generated for the most inconsequential convenience as we urbanites have come to expect plastic straws in almost all drinks. We ve all seen the pic of the turtle with a straw stuck up it s nose - but there is now an altenative.<br />
 </span></p>
 <ul>
 <li><span class=""a-list-item"">dishwasher safe<br />
@@ -429,7 +429,7 @@ bamboo straw,single,,"<p><span class=""a-list-item""> Plastic straws are one of 
 </ul>
 <p>They are priced at £2 per straw or £8 for 5.</p>
 ",2,https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/02/starws.jpg,bamboo straw,kitchen,174:597,bamboo straw single,KITCHEN
-bamboo straw,multibuy,,"<p><span class=""a-list-item""> Plastic straws are one of the most vile creatures in the single use plastic family! Seemingly harmless and small these are actually an example of colossal waste generated for the most inconsequential convenience as we urbanites have come to expect plastic straws in almost all drinks. We ve all seen the pic of the turtle with a straw stuck up it s nose - but there is now an altenative.<br />
+Bamboo straw,Multibuy,,"<p><span class=""a-list-item""> Plastic straws are one of the most vile creatures in the single use plastic family! Seemingly harmless and small these are actually an example of colossal waste generated for the most inconsequential convenience as we urbanites have come to expect plastic straws in almost all drinks. We ve all seen the pic of the turtle with a straw stuck up it s nose - but there is now an altenative.<br />
 </span></p>
 <ul>
 <li><span class=""a-list-item"">dishwasher safe<br />
@@ -443,7 +443,7 @@ bamboo straw,multibuy,,"<p><span class=""a-list-item""> Plastic straws are one o
 </ul>
 <p>They are priced at £2 per straw or £8 for 5.</p>
 ",8,https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/02/starws.jpg,bamboo straw x 5,kitchen,174:596,bamboo straw multibuy,KITCHEN
-sponge cloths,,,"<p>Sodasan Eco Sponge Cloths is a long lasting, highly absorbent eco-friendly cleaning cloth with natural fibres which can be used anywhere around the house. The sponge cloths do not contain any fungicide and can be machine washed. Due to the natural fibres of the cloths they are easily compostable. They are composed of a cellulose - cottonwool mix and can be used around the entire house.</p>
+Sponge cloths,,,"<p>Sodasan Eco Sponge Cloths is a long lasting, highly absorbent eco-friendly cleaning cloth with natural fibres which can be used anywhere around the house. The sponge cloths do not contain any fungicide and can be machine washed. Due to the natural fibres of the cloths they are easily compostable. They are composed of a cellulose - cottonwool mix and can be used around the entire house.</p>
 <p><b>Benefits:</b><br />
 <span class=""yesBox"">Yes</span> Can be used for any household chore<br />
 <span class=""yesBox"">Yes</span> Compostable<br />
@@ -451,32 +451,32 @@ sponge cloths,,,"<p>Sodasan Eco Sponge Cloths is a long lasting, highly absorben
 <span class=""yesBox"">Yes</span> Lint free<br />
 <span class=""yesBox"">Yes</span> Certified Vegan</p>
 ",2.5,https://i2.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/02/sodasan-eco-absorbent-cloths-1-kos-176345-en.jpg,sponge cloths,kitchen,171,eco sponge cloths,CLEANING
-pot brush,,,"<p>Fabulous little Pot Brush made ​​with FSC beech wood handle and natural plant fibers.</p>
+Pot brush,,,"<p>Fabulous little Pot Brush made ​​with FSC beech wood handle and natural plant fibers.</p>
 <p>Perfect for use as a pot scourer for crusted on food. Handy Hint : even easier if you have burnt the bottom of the pot - sprinkle with a layer of bicarb - wet and leave to soak for a couple of hours.&nbsp; Job done.</p>
 <p><b>Maintenance: E</b>very 6 months apply a thin layer of linseed oil to the handle and leave to dry.</p>
 <p><strong>Has been FSC certified:</strong> which ensures that the management of the forest where trees used to produce this product has followed a series of principles and based on environmental, social and economic criteria are respected forest.</p>
 <p>This is another Redecker product so quality guaranteed.</p>
 ",4,https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/02/brush.jpg,pot brush,kitchen,168,pot brush,CLEANING
-dish brush,,,"<p>Wooden Hard Dish Brush with untreated beech wood handle &amp; fibre. Head is 8cm diameter and can be composted when tired. Replacement heads available . Handle 18 cm long. Handy hook to facillitate hanging when not in use.&nbsp; Made in Germany by Redecker.</p>
+Dish brush,,,"<p>Wooden Hard Dish Brush with untreated beech wood handle &amp; fibre. Head is 8cm diameter and can be composted when tired. Replacement heads available . Handle 18 cm long. Handy hook to facillitate hanging when not in use.&nbsp; Made in Germany by Redecker.</p>
 <p>Redecker brushes are the product of 75 years of experience in making hand crafted brushes that are not only functional but beautifully designed. Redecker themselves say ""75 years have made us neither inflexible nor bored. We remain creative, curious and dedicated to our task with passion and enjoyment.""</p>
 ",4,https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/02/322540_3_2_1.jpg,dish brush,kitchen,166,dish brush,CLEANING
-veg bags ,,,,5,,veg bags ,bags jars bottles boxes,,,
-bamboo toothbrush,adult,"<p>child s or adult s</p>
+Veg bags,,,,5,,veg bags ,bags jars bottles boxes,,,
+Bamboo toothbrush,Adult,"<p>child s or adult s</p>
 ",,2.5,https://i2.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/05/ad-t-brush.jpg,bamboo toothbrush,Dental,602:641,Bamboo toothbrush adult,bathroom
-bamboo toothbrush,child,"<p>child s or adult s</p>
+Bamboo toothbrush,Child,"<p>child s or adult s</p>
 ",,2.5,https://i2.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/05/ad-t-brush.jpg,,Dental,602:640,Bamboo toothbrush child,bathroom
-safix scouring pads,,"<p>A natural reusable scouring pad made from coconut fiber.</p>
+Safix scouring pads,,"<p>A natural reusable scouring pad made from coconut fiber.</p>
 <p>Plastic free and Biodegradable/Compostable at the end of it&#8217;s life.</p>
 <p>Does not release microplasics into our environment, unlike commercial scouring pads</p>
 ",,1.9,https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/05/shopping.jpg,safix scouring pads,kitchen,463,safix scouring pads,KITCHEN
-canvas shopper,,"<p>Cotton Shopper Tote</p>
+Canvas shopper,,"<p>Cotton Shopper Tote</p>
 <p>As well as a good quality heavier than normal weight of material with each bag weighing an average of 65gms&nbsp;internal seams are overlocked and the handle fixings double stitched for long trouble free life.</p>
 <p>Material: 100% Unbleached 5 oz Cotton Calico<br />
 Size: 38cm W x 42cmD x 62cm handles<br />
 Colour: Natural</p>
 <p>The bag has fully finished seams and strong handles. A stylish and useful bag with superb ECO integrity.</p>
 ",,3.2,https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/06/IMAG0594.jpg,canvas shopper,bags jars bottles boxes,638,Canvas Shopper,BAGS
-string shopper,long,"<p>&nbsp;Recycled Cotton String Bags<br />
+String shopper,Long,"<p>&nbsp;Recycled Cotton String Bags<br />
 are available&nbsp;with long or short handles.</p>
 <p>Made from recycled cotton and so&nbsp;are a&nbsp;completely eco friendly and stylish alternative to plastic bags.<br />
 &nbsp;<br />
@@ -485,7 +485,7 @@ So useable and convenient that it is little wonder that more and more people car
 <p>Sourced from&nbsp; S. India where the workers are part of a Rural Womens workforce and the ETI Base code is in&nbsp; place to ensure fair conditions for those workers.</p>
 <p>So eco-friendly. So fairly traded. So useful.</p>
 ",,3.2,https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/06/IMAG0592.jpg,string shopper,bags jars bottles boxes,628:656,string bags long,BAGS
-string shopper,short,"<p>&nbsp;Recycled Cotton String Bags<br />
+String shopper,Short,"<p>&nbsp;Recycled Cotton String Bags<br />
 are available&nbsp;with long or short handles.</p>
 <p>Made from recycled cotton and so&nbsp;are a&nbsp;completely eco friendly and stylish alternative to plastic bags.<br />
 &nbsp;<br />
@@ -494,21 +494,21 @@ So useable and convenient that it is little wonder that more and more people car
 <p>Sourced from&nbsp; S. India where the workers are part of a Rural Womens workforce and the ETI Base code is in&nbsp; place to ensure fair conditions for those workers.</p>
 <p>So eco-friendly. So fairly traded. So useful.</p>
 ",,3.2,https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/06/IMAG0592.jpg,,bags jars bottles boxes,628:657,string bags short,BAGS
-bamboo ear buds ,,"<p>These cotton swabs are made from bamboo and soft cotton, thus 100% biodegradable.</p>
+Bamboo ear buds,,"<p>These cotton swabs are made from bamboo and soft cotton, thus 100% biodegradable.</p>
 <p>Both at home and while travelling, you can now choose these cotton buds as a sustainable alternative. After usage, you can dispose of the cotton swabs by simply throwing them into your organic waste or compost.</p>
 <p>They are packaged in a box made of recycled cardboard. 200 cotton swabs per box.</p>
 <p>Of course, all of our products are water-neutral, vegan &amp; fair.</p>
 ",,2.5,https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/06/38799977_2062376000746722_5777615183677489152_n.jpg,bamboo ear buds ,bathroom,642,bamboo cotton buds x 400,bathroom
-toilet roll,,,,0.85,,toilet roll,bathroom,,,
-elephant box large square,,,"<p>Going zero waste? This canister is perfect for shopping at your local bulk store. Airtight and leakproof, it's also great for keeping things fresh in the cupboard or for taking your morning smoothie to work. All our products can be used to store food in the freezer and this canister is perfect for storing stocks or soups. Use a marker pen to keep track of whats inside.</p>
+Toilet roll,,,,0.85,,toilet roll,bathroom,,,
+Elephant box large square,,,"<p>Going zero waste? This canister is perfect for shopping at your local bulk store. Airtight and leakproof, it's also great for keeping things fresh in the cupboard or for taking your morning smoothie to work. All our products can be used to store food in the freezer and this canister is perfect for storing stocks or soups. Use a marker pen to keep track of whats inside.</p>
 <p>Made from 100% food grade stainless steel. Contains a silicone seal which removes easily for washing.</p>
 ",16,https://i2.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/02/ele-box-75c5a557934c_1024x1024.jpg,elephant box large square,bags jars bottles boxes,143,elephant box,KITCHEN
-face pads x 12,,,,10,,face pads x 12,bathroom,,,
-shampoo faith,,,,0.0105,,shampoo faith,Hair,,,
-conditioner faith,,,,0.0105,,conditioner faith,Hair,,,
-multisurface cleaner ,,,,0.0046,,multisurface cleaner ,washing,,,
-laundry powder,,,,0.0046,http://bambooturtle.co.uk/wp-content/plugins/woocommerce/assets/images/placeholder.png,laundry powder,washing,256,Laundry powder - concentrated - Ecoleaf,KITCHEN
-toothpaste,,"<div class=""entry-content"">
+Face pads x 12,,,,10,,face pads x 12,bathroom,,,
+Shampoo faith,,,,0.0105,,shampoo faith,Hair,,,
+Conditioner faith,,,,0.0105,,conditioner faith,Hair,,,
+Multisurface cleaner,,,,0.0046,,multisurface cleaner ,washing,,,
+Laundry powder,,,,0.0046,http://bambooturtle.co.uk/wp-content/plugins/woocommerce/assets/images/placeholder.png,laundry powder,washing,256,Laundry powder - concentrated - Ecoleaf,KITCHEN
+Toothpaste,,"<div class=""entry-content"">
 <p>50 g</p>
 <p>Natural Toothpaste with pure white clay, and extracts of myrrh and liquorice (no problem if you dislike liquorice, the flavour is not detectable due to the essential oils) which are proven to inhibit plaque causing bacteria. Available in peppermint.</p>
 <p>At Green Wyse we know that it is unecessary to use toothpastes with bright colours or high foaming action. These make no difference to the cleaning ability. Our natural toothpastes have chalk to polish away stains, kaolin to act as a gum astringent, toning and tightening, herbal extracts of myrrh and liquorice to inhibit plaque forming bacteria and promote hard enamel</p>
@@ -528,23 +528,23 @@ toothpaste,,"<div class=""entry-content"">
 <p>Organic plant extracts and ingredients used whenever possible</p>
 <p>Cottage industry production means low outgoings and overheads, with the cost savings passed to the consumers.</p>
 ",5,https://i2.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/05/tooth.jpg,toothpaste,Dental,469,toothpaste,beauty
-green tea ,,,,0.048,,green tea ,coffee /tea ,,,
-Earl grey ,,,,0.048,,Earl grey ,coffee /tea ,,,
-English Breakfast ,,,,0.05,,English Breakfast ,coffee /tea ,,,
+Green tea,,,,0.048,,green tea ,coffee /tea ,,,
+Earl grey,,,,0.048,,Earl grey ,coffee /tea ,,,
+English breakfast,,,,0.05,,English Breakfast ,coffee /tea ,,,
 Chamomile,,,,0.043,,Chamomile,coffee /tea ,,,
-peppermint,,,,0.026,,peppermint,coffee /tea ,,,
-coffee beans ,,,,0.0274,,coffee beans ,coffee /tea ,,,
-ground coffee,,,,0.0274,,ground coffee,coffee /tea ,,,
-decaf,,,,0.032,,decaf,coffee /tea ,,,
-Pop corn ,,"<p>1 cup = 340 g</p>
+Peppermint,,,,0.026,,peppermint,coffee /tea ,,,
+Coffee beans,,,,0.0274,,coffee beans ,coffee /tea ,,,
+Ground coffee,,,,0.0274,,ground coffee,coffee /tea ,,,
+Decaf,,,,0.032,,decaf,coffee /tea ,,,
+Pop corn,,"<p>1 cup = 340 g</p>
 ",,0.005,https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG04271.jpg,Pop corn ,baking,269,Popcorn - organic,GRAINS
-Coconut milk powder ,,"<p>1 cup = 220g</p>
+Coconut milk powder,,"<p>1 cup = 220g</p>
 ",,0.025,https://i2.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/05/IMAG0431.jpg,Coconut milk powder ,baking,386,Coconut Milk powder - Organic,BAKING
 Cacao powder,,,,0.019,,Cacao powder,baking,,,
 Milk powder,,,,0.032,,Milk powder,baking,,,
 Liquid laundry,,,,0.003,,Liquid laundry,washing,,,
 Washing up liquid,,,,0.0016,,Washing up liquid,washing,,,
-beeswax wraps,small,"<p>Please note the patterns all vary &#8211; so not exactly as seen in pictutres.</p>
+Beeswax wraps,Small,"<p>Please note the patterns all vary &#8211; so not exactly as seen in pictutres.</p>
 <p>&nbsp;</p>
 <p>Eco friendly alternative to cling film and tin foil. Breathable and anti bacterial helping to keep your food fresh. Flexible and slightly adhesive. Can be shaped around bowls and folded to wrap sandwiches, bread, cheese, fruit and vegetables.</p>
 <p>Handmade in Bedfordshire using 100 % cotton fabric, local wax,organicjojoba oiland natural pine resin.</p>
@@ -559,7 +559,7 @@ beeswax wraps,small,"<p>Please note the patterns all vary &#8211; so not exactly
 https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/05/pouch-bees.jpg
 https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/05/med-bees-wax.jpg
 https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/05/bees-wax-small.jpg",beeswax wrap small,bees,579:589,bees wax wraps small,KITCHEN
-beeswax wraps ,medium,"<p>Please note the patterns all vary &#8211; so not exactly as seen in pictutres.</p>
+Beeswax wraps,Medium,"<p>Please note the patterns all vary &#8211; so not exactly as seen in pictutres.</p>
 <p>&nbsp;</p>
 <p>Eco friendly alternative to cling film and tin foil. Breathable and anti bacterial helping to keep your food fresh. Flexible and slightly adhesive. Can be shaped around bowls and folded to wrap sandwiches, bread, cheese, fruit and vegetables.</p>
 <p>Handmade in Bedfordshire using 100 % cotton fabric, local wax,organicjojoba oiland natural pine resin.</p>
@@ -574,7 +574,7 @@ beeswax wraps ,medium,"<p>Please note the patterns all vary &#8211; so not exact
 https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/05/pouch-bees.jpg
 https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/05/med-bees-wax.jpg
 https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/05/bees-wax-small.jpg",beeswax wraps medium,bees,579:588,bees wax wraps medium,KITCHEN
-beeswax wraps ,large,"<p>Please note the patterns all vary &#8211; so not exactly as seen in pictutres.</p>
+Beeswax wraps,Large,"<p>Please note the patterns all vary &#8211; so not exactly as seen in pictutres.</p>
 <p>&nbsp;</p>
 <p>Eco friendly alternative to cling film and tin foil. Breathable and anti bacterial helping to keep your food fresh. Flexible and slightly adhesive. Can be shaped around bowls and folded to wrap sandwiches, bread, cheese, fruit and vegetables.</p>
 <p>Handmade in Bedfordshire using 100 % cotton fabric, local wax,organicjojoba oiland natural pine resin.</p>
@@ -589,7 +589,7 @@ beeswax wraps ,large,"<p>Please note the patterns all vary &#8211; so not exactl
 https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/05/pouch-bees.jpg
 https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/05/med-bees-wax.jpg
 https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/05/bees-wax-small.jpg",beeswax wraps large,bees,579:587,bees wax wraps large,KITCHEN
-beeswax wrap  ,pouch,"<p>Please note the patterns all vary &#8211; so not exactly as seen in pictutres.</p>
+Beeswax wrap,Pouch,"<p>Please note the patterns all vary &#8211; so not exactly as seen in pictutres.</p>
 <p>&nbsp;</p>
 <p>Eco friendly alternative to cling film and tin foil. Breathable and anti bacterial helping to keep your food fresh. Flexible and slightly adhesive. Can be shaped around bowls and folded to wrap sandwiches, bread, cheese, fruit and vegetables.</p>
 <p>Handmade in Bedfordshire using 100 % cotton fabric, local wax,organicjojoba oiland natural pine resin.</p>
@@ -619,9 +619,9 @@ Cutlery set,,"<div class=""rte accordion-content"">
 </div>
 ",,12,https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/08/81EiRfs31EL._SL1500.jpg,Cutlery set,kitchen,734,Cutlery set,KITCHEN
 Star anise,,,,0.026,,Star anise,spices,,,
-premium toilet paper ,,,,0.95,,premium toilet paper ,bathroom,,,
-sesame seeds ,,,,0.0085,,sesame seeds ,nuts & seeds,,,
-walnuts,,"<p>1 cup of walnuts = 310 g</p>
+Premium toilet paper,,,,0.95,,premium toilet paper ,bathroom,,,
+Sesame seeds,,,,0.0085,,sesame seeds ,nuts & seeds,,,
+Walnuts,,"<p>1 cup of walnuts = 310 g</p>
 ","<h5><b><i>Typical composition per 100g </i></b></h5>
 <p>....<b>energy kJ</b>..................... 2884 kJ<br />
 ....<b>energy kCal</b>................. 689 kCal<br />
@@ -634,14 +634,14 @@ walnuts,,"<p>1 cup of walnuts = 310 g</p>
 ....<b>sodium</b>.......................... 0.004g<br />
 ....<b>salt</b>................................. 0.01g</p>
 ",0.0271,https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG0486.jpg,walnuts,nuts & seeds,272,Walnuts - light halves,NUTS &amp; SEEDS
-macaroni,,,,0.0042,,macaroni,pasta & rice,,,
-shells,,,,0.0047,,shells,pasta & rice,,,
+Macaroni,,,,0.0042,,macaroni,pasta & rice,,,
+Shells,,,,0.0047,,shells,pasta & rice,,,
 Hand wash,,,,0.0035,,Hand wash,bathroom,,,
 Pasta wholemeal,,,,0.0038,,Pasta wholemeal,pasta & rice,,,
 Hot choc dairy free,,"<p>1 cup = 240g</p>
 ",,0.022,https://i2.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/05/IMAG0435.jpg,Hot choc dairy free,coffee /tea ,391,Hot Choc - Vegan & Organic,BAKING
- brushes replacement heads ,,,,3,, brushes replacement heads ,kitchen,,,
-Spelt wholemeal ,,"<p>1 cup = 220g</p>
+Brushes replacement heads,,,,3,, brushes replacement heads ,kitchen,,,
+Spelt wholemeal,,"<p>1 cup = 220g</p>
 ",,0.0045,https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/04/IMAG0433.jpg,Spelt wholemeal ,baking,273,Spelt Flour Wholegrain,BAKING
 Bicarb,,,,0.0036,,Bicarb,washing,,,
 Washing soda,,,,0.004,,Washing soda,washing,,,
@@ -676,7 +676,7 @@ Soap,,,"<div class=""container"">
 </div>
 </div>
 ",2.4,https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/05/soap.jpg,Soap,bathroom,466,soaps - friendly,beauty
-Konjac sponge,pure,"<p>The Konjac potato or <i>Konnyaku</i> is a perennial plant native to Asia and can be found growing wild at very high altitudes. A totally natural food source, Konjac is 97% water, rich in mineral goodness and low in calories. The plant is naturally alkaline, which leaves skin perfectly balanced.</p>
+Konjac sponge,Pure,"<p>The Konjac potato or <i>Konnyaku</i> is a perennial plant native to Asia and can be found growing wild at very high altitudes. A totally natural food source, Konjac is 97% water, rich in mineral goodness and low in calories. The plant is naturally alkaline, which leaves skin perfectly balanced.</p>
 <p>Konnyaku has been used in Korea, Japan and China for over 1,500 years as medicine, food, a dieting aid and a beauty product. Due to the plant&#8217;s claimed health giving properties, the Konjac Sponge was originally created for delicate baby skin.</p>
 <p>We are proud to carry the Leaping Bunny and Vegan Society symbols as signs of our commitment to producing natural, cruelty free skin care. All our sponges are tested for authenticity and purity, However, many inferior products are often mass produced in poor quality, unethical factories and use low grade, unclean materials.</p>
 <p>&nbsp;</p>
@@ -703,7 +703,7 @@ Konjac sponge,pure,"<p>The Konjac potato or <i>Konnyaku</i> is a perennial plant
 </div>
 ",8.5,"https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/06/31760150_1979906672326989_2052441381858705408_o-e1529499963914.jpg
 https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/06/Konjac-Sponge-Website-Master-Developed-MASTER_02.jpg",Konjac sponge,bathroom,643:663,konjac sponge pure,beauty
-Konjac sponge,charcoal,"<p>The Konjac potato or <i>Konnyaku</i> is a perennial plant native to Asia and can be found growing wild at very high altitudes. A totally natural food source, Konjac is 97% water, rich in mineral goodness and low in calories. The plant is naturally alkaline, which leaves skin perfectly balanced.</p>
+Konjac sponge,Charcoal,"<p>The Konjac potato or <i>Konnyaku</i> is a perennial plant native to Asia and can be found growing wild at very high altitudes. A totally natural food source, Konjac is 97% water, rich in mineral goodness and low in calories. The plant is naturally alkaline, which leaves skin perfectly balanced.</p>
 <p>Konnyaku has been used in Korea, Japan and China for over 1,500 years as medicine, food, a dieting aid and a beauty product. Due to the plant&#8217;s claimed health giving properties, the Konjac Sponge was originally created for delicate baby skin.</p>
 <p>We are proud to carry the Leaping Bunny and Vegan Society symbols as signs of our commitment to producing natural, cruelty free skin care. All our sponges are tested for authenticity and purity, However, many inferior products are often mass produced in poor quality, unethical factories and use low grade, unclean materials.</p>
 <p>&nbsp;</p>
@@ -730,7 +730,7 @@ Konjac sponge,charcoal,"<p>The Konjac potato or <i>Konnyaku</i> is a perennial p
 </div>
 ",8.5,"https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/06/31760150_1979906672326989_2052441381858705408_o-e1529499963914.jpg
 https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/06/Konjac-Sponge-Website-Master-Developed-MASTER_02.jpg",,bathroom,643:661,konjac sponge charcoal,beauty
-Konjac sponge,chamomile,"<p>The Konjac potato or <i>Konnyaku</i> is a perennial plant native to Asia and can be found growing wild at very high altitudes. A totally natural food source, Konjac is 97% water, rich in mineral goodness and low in calories. The plant is naturally alkaline, which leaves skin perfectly balanced.</p>
+Konjac sponge,Chamomile,"<p>The Konjac potato or <i>Konnyaku</i> is a perennial plant native to Asia and can be found growing wild at very high altitudes. A totally natural food source, Konjac is 97% water, rich in mineral goodness and low in calories. The plant is naturally alkaline, which leaves skin perfectly balanced.</p>
 <p>Konnyaku has been used in Korea, Japan and China for over 1,500 years as medicine, food, a dieting aid and a beauty product. Due to the plant&#8217;s claimed health giving properties, the Konjac Sponge was originally created for delicate baby skin.</p>
 <p>We are proud to carry the Leaping Bunny and Vegan Society symbols as signs of our commitment to producing natural, cruelty free skin care. All our sponges are tested for authenticity and purity, However, many inferior products are often mass produced in poor quality, unethical factories and use low grade, unclean materials.</p>
 <p>&nbsp;</p>
@@ -757,7 +757,7 @@ Konjac sponge,chamomile,"<p>The Konjac potato or <i>Konnyaku</i> is a perennial 
 </div>
 ",8.5,"https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/06/31760150_1979906672326989_2052441381858705408_o-e1529499963914.jpg
 https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/06/Konjac-Sponge-Website-Master-Developed-MASTER_02.jpg",,bathroom,643:660,konjac sponge chamomile,beauty
-Konjac sponge,Green-clay,"<p>The Konjac potato or <i>Konnyaku</i> is a perennial plant native to Asia and can be found growing wild at very high altitudes. A totally natural food source, Konjac is 97% water, rich in mineral goodness and low in calories. The plant is naturally alkaline, which leaves skin perfectly balanced.</p>
+Konjac sponge,Green clay,"<p>The Konjac potato or <i>Konnyaku</i> is a perennial plant native to Asia and can be found growing wild at very high altitudes. A totally natural food source, Konjac is 97% water, rich in mineral goodness and low in calories. The plant is naturally alkaline, which leaves skin perfectly balanced.</p>
 <p>Konnyaku has been used in Korea, Japan and China for over 1,500 years as medicine, food, a dieting aid and a beauty product. Due to the plant&#8217;s claimed health giving properties, the Konjac Sponge was originally created for delicate baby skin.</p>
 <p>We are proud to carry the Leaping Bunny and Vegan Society symbols as signs of our commitment to producing natural, cruelty free skin care. All our sponges are tested for authenticity and purity, However, many inferior products are often mass produced in poor quality, unethical factories and use low grade, unclean materials.</p>
 <p>&nbsp;</p>
@@ -784,7 +784,7 @@ Konjac sponge,Green-clay,"<p>The Konjac potato or <i>Konnyaku</i> is a perennial
 </div>
 ",8.5,"https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/06/31760150_1979906672326989_2052441381858705408_o-e1529499963914.jpg
 https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/06/Konjac-Sponge-Website-Master-Developed-MASTER_02.jpg",,bathroom,643:662,konjac sponge green-clay,beauty
-Konjac sponge,Red-clay,"<p>The Konjac potato or <i>Konnyaku</i> is a perennial plant native to Asia and can be found growing wild at very high altitudes. A totally natural food source, Konjac is 97% water, rich in mineral goodness and low in calories. The plant is naturally alkaline, which leaves skin perfectly balanced.</p>
+Konjac sponge,Red clay,"<p>The Konjac potato or <i>Konnyaku</i> is a perennial plant native to Asia and can be found growing wild at very high altitudes. A totally natural food source, Konjac is 97% water, rich in mineral goodness and low in calories. The plant is naturally alkaline, which leaves skin perfectly balanced.</p>
 <p>Konnyaku has been used in Korea, Japan and China for over 1,500 years as medicine, food, a dieting aid and a beauty product. Due to the plant&#8217;s claimed health giving properties, the Konjac Sponge was originally created for delicate baby skin.</p>
 <p>We are proud to carry the Leaping Bunny and Vegan Society symbols as signs of our commitment to producing natural, cruelty free skin care. All our sponges are tested for authenticity and purity, However, many inferior products are often mass produced in poor quality, unethical factories and use low grade, unclean materials.</p>
 <p>&nbsp;</p>
@@ -813,9 +813,9 @@ Konjac sponge,Red-clay,"<p>The Konjac potato or <i>Konnyaku</i> is a perennial p
 https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/06/Konjac-Sponge-Website-Master-Developed-MASTER_02.jpg",,bathroom,643:664,konjac sponge red-clay,beauty
 Straw cleaners,,,,1,,Straw cleaners,kitchen,,,
 Jar large,,,,3.5,,Jar large,bags jars bottles boxes,,,
-Jar medium ,,,,2.7,,Jar medium ,bags jars bottles boxes,,,
+Jar medium,,,,2.7,,Jar medium ,bags jars bottles boxes,,,
 Jar small,,,,1.5,,Jar small,bags jars bottles boxes,,,
-Beauty balm vegan,Orange-lavender-frankincence,"<p>The <strong>Balancing Frankincense, Lavender and Orange Beauty Balm</strong> is a luxurious treat <wbr>&#8211; this can be used as an intensive moisturiser, as a cleanser or as a concentrating mask to be slathered on the skin for 15 mins and removed with a flannel.</p>
+Beauty balm vegan,Orange lavender frankincence,"<p>The <strong>Balancing Frankincense, Lavender and Orange Beauty Balm</strong> is a luxurious treat <wbr>&#8211; this can be used as an intensive moisturiser, as a cleanser or as a concentrating mask to be slathered on the skin for 15 mins and removed with a flannel.</p>
 <p>Frankincense is thought to have anti-ageing properties and is a favourite in the beauty world for its youthful affect!</p>
 <p>The healing properties of lavender are well documented &#8211; this is due to its anti oxidant and anti microbial benefits. This means it s perfect for hormonal break outs or when you need a skin pick me up after a late night.</p>
 <p>The zesty orange essential oil complements the frankincense beautifully, making this the must have stunning treat for your skin. <wbr></p>
@@ -843,7 +843,7 @@ Beauty balm vegan,Orange-lavender-frankincence,"<p>The <strong>Balancing Frankin
 <p>Essential Oils</p>
 </div>
 ",8,https://i2.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/05/beauty-balms.jpg,Beauty balm vegan,bathroom,470:593,beauty balms orange-lavender-frankincence,beauty
-Beauty balm vegan,Rose-geranium-sweet-orange,"<p>The <strong>Balancing Frankincense, Lavender and Orange Beauty Balm</strong> is a luxurious treat <wbr>&#8211; this can be used as an intensive moisturiser, as a cleanser or as a concentrating mask to be slathered on the skin for 15 mins and removed with a flannel.</p>
+Beauty balm vegan,Rose geranium sweet orange,"<p>The <strong>Balancing Frankincense, Lavender and Orange Beauty Balm</strong> is a luxurious treat <wbr>&#8211; this can be used as an intensive moisturiser, as a cleanser or as a concentrating mask to be slathered on the skin for 15 mins and removed with a flannel.</p>
 <p>Frankincense is thought to have anti-ageing properties and is a favourite in the beauty world for its youthful affect!</p>
 <p>The healing properties of lavender are well documented &#8211; this is due to its anti oxidant and anti microbial benefits. This means it s perfect for hormonal break outs or when you need a skin pick me up after a late night.</p>
 <p>The zesty orange essential oil complements the frankincense beautifully, making this the must have stunning treat for your skin. <wbr></p>
@@ -871,35 +871,35 @@ Beauty balm vegan,Rose-geranium-sweet-orange,"<p>The <strong>Balancing Frankince
 <p>Essential Oils</p>
 </div>
 ",8,https://i2.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/05/beauty-balms.jpg,,bathroom,470:594,beauty balms rose-geranium-sweet-orange,beauty
-sultanas,,,,0.0067,,sultanas,fruit,,,
-shampoo SUMA,,,,0.007,,shampoo SUMA,Hair,,,
-conditioner - SUMA,,,,0.007,,conditioner - SUMA,Hair,,,
+Sultanas,,,,0.0067,,sultanas,fruit,,,
+Shampoo suma,,,,0.007,,shampoo SUMA,Hair,,,
+Conditioner suma,,,,0.007,,conditioner - SUMA,Hair,,,
 Large st,,,,9,,Large st,Ladies,,,
 Medium st,,,,8,,Medium st,Ladies,,,
 Small st,,,,6,,Small st,Ladies,,,
 Pourer,,,,2,,Pourer,kitchen,,,
-Organicup,size-b,"<p>Please refer directly to <a href=""https://www.organicup.com/help/"" target=""_blank"" rel=""noopener"">Organicup</a> website for more information and help.</p>
+Organicup,Size b,"<p>Please refer directly to <a href=""https://www.organicup.com/help/"" target=""_blank"" rel=""noopener"">Organicup</a> website for more information and help.</p>
 ",,20,https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/06/organicup.jpg,Organicup,Ladies,647:649,organicup size-b,bathroom
-Organicup,Size-a,"<p>Please refer directly to <a href=""https://www.organicup.com/help/"" target=""_blank"" rel=""noopener"">Organicup</a> website for more information and help.</p>
+Organicup,Size a,"<p>Please refer directly to <a href=""https://www.organicup.com/help/"" target=""_blank"" rel=""noopener"">Organicup</a> website for more information and help.</p>
 ",,20,https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/06/organicup.jpg,,Ladies,647:648,organicup size-a,bathroom
-Dishwasher tabs ,,,,0.15,,Dishwasher tabs ,washing,,,
-Dental floss,cardamon,"<p>Our natural&nbsp;dental charcoal&nbsp;floss is&nbsp;made&nbsp;with bamboo charcoal,&nbsp;beeswax&nbsp;and peppermint&nbsp;essential oil. This 30 metres&nbsp;floss clew is packed in a zero-waste and plastic free glass container; the&nbsp;metal dispensing lid easily allows you to cut the&nbsp;floss.</p>
+Dishwasher tabs,,,,0.15,,Dishwasher tabs ,washing,,,
+Dental floss,Cardamon,"<p>Our natural&nbsp;dental charcoal&nbsp;floss is&nbsp;made&nbsp;with bamboo charcoal,&nbsp;beeswax&nbsp;and peppermint&nbsp;essential oil. This 30 metres&nbsp;floss clew is packed in a zero-waste and plastic free glass container; the&nbsp;metal dispensing lid easily allows you to cut the&nbsp;floss.</p>
 <p>Our natural&nbsp;dental silk&nbsp;floss is&nbsp;made&nbsp;with candelilla wax&nbsp;and cardamon essential oil.</p>
 ","<p>• PETA cruelty-free &amp; plastic-free packaging</p>
 <p>•&nbsp;Made from wild &amp; sustainably grown silk from&nbsp;the Chinese Silk District</p>
 <p>• Comes in a&nbsp;reusable&nbsp;glass container&nbsp;&amp;&nbsp;metal dispenser</p>
 <p>• Packed in&nbsp;biodegradable and compostable&nbsp;kraft&nbsp;paper box</p>
 ",5,http://bambooturtle.co.uk/wp-content/plugins/woocommerce/assets/images/placeholder.png,Dental floss,Dental,569:591,Dental Floss - natural cardamon,bathroom
-Dental floss,minty,"<p>Our natural&nbsp;dental charcoal&nbsp;floss is&nbsp;made&nbsp;with bamboo charcoal,&nbsp;beeswax&nbsp;and peppermint&nbsp;essential oil. This 30 metres&nbsp;floss clew is packed in a zero-waste and plastic free glass container; the&nbsp;metal dispensing lid easily allows you to cut the&nbsp;floss.</p>
+Dental floss,Minty,"<p>Our natural&nbsp;dental charcoal&nbsp;floss is&nbsp;made&nbsp;with bamboo charcoal,&nbsp;beeswax&nbsp;and peppermint&nbsp;essential oil. This 30 metres&nbsp;floss clew is packed in a zero-waste and plastic free glass container; the&nbsp;metal dispensing lid easily allows you to cut the&nbsp;floss.</p>
 <p>Our natural&nbsp;dental silk&nbsp;floss is&nbsp;made&nbsp;with candelilla wax&nbsp;and cardamon essential oil.</p>
 ","<p>• PETA cruelty-free &amp; plastic-free packaging</p>
 <p>•&nbsp;Made from wild &amp; sustainably grown silk from&nbsp;the Chinese Silk District</p>
 <p>• Comes in a&nbsp;reusable&nbsp;glass container&nbsp;&amp;&nbsp;metal dispenser</p>
 <p>• Packed in&nbsp;biodegradable and compostable&nbsp;kraft&nbsp;paper box</p>
 ",5,http://bambooturtle.co.uk/wp-content/plugins/woocommerce/assets/images/placeholder.png,,Dental,569:592,Dental Floss - natural minty,bathroom
-Recycled note book,large,,,8,https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/06/IMG_8854.jpg,Book large,Books,618:621,Recycled note books large,general
-Recycled note book,medium,,,6,https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/06/IMG_8854.jpg,Book medium,Books,618:622,Recycled note books medium,general
-Recycled note book,small,,,4,https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/06/IMG_8854.jpg,Books small,Books,618:623,Recycled note books small,general
+Recycled note book,Large,,,8,https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/06/IMG_8854.jpg,Book large,Books,618:621,Recycled note books large,general
+Recycled note book,Medium,,,6,https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/06/IMG_8854.jpg,Book medium,Books,618:622,Recycled note books medium,general
+Recycled note book,Small,,,4,https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/06/IMG_8854.jpg,Books small,Books,618:623,Recycled note books small,general
 Metal straw,,,,2,https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/06/IMG_8895.jpg,Metal straw,kitchen,610,Metal Straws,KITCHEN
 Lip balm vegan,,,,4,,Lip balm vegan,bathroom,,,
 Shop of pots,,,,25,,Shop of pots,Gift sets,,,
@@ -921,10 +921,10 @@ Mini jars,,,,0.5,,Mini jars,bags jars bottles boxes,,,
 Carabiner clip,,,,3,,Carabiner clip,kitchen,,,
 Card,,,,2,,Card,Books,,,
 Corn flakes,,,,0.0043,,Corn flakes,cereal,,,
-Nutritional  yeast,,,,0.03,,Nutritional  yeast,baking,,,
-mrs midd Oil bottle,,,,4,,mrs midd Oil bottle,baking,,,
+Nutritional yeast,,,,0.03,,Nutritional  yeast,baking,,,
+Mrs midd oil bottle,,,,4,,mrs midd Oil bottle,baking,,,
 Bulgar wheat,,,,0.005,,Bulgar wheat,grains & beans ,,,
-Mrs Middleton oil,,,,0.016,,Mrs Middleton oil,baking,,,
+Mrs middleton oil,,,,0.016,,Mrs Middleton oil,baking,,,
 Razor bamboo,,"<div class=""rte accordion-content"">
 <div>Return to classic shaving with&nbsp;Bambaw’s&nbsp;stylish double edge safety bamboo razor.&nbsp;</div>
 <div>With a sturdy bamboo handle,&nbsp;our unique bamboo safety razor is a great plastic-free alternative.</div>
@@ -933,8 +933,8 @@ Razor bamboo,,"<div class=""rte accordion-content"">
 </div>
 ",,20,https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/08/71ORk96R_2BwL._SL1500.jpg,Razor bamboo,bathroom,737,bamboo safety razor,bathroom
 Bottle pump,,,,1,,Bottle pump,bags jars bottles boxes,,,
-Linseed golden ,,,,0.0064,,Linseed golden ,nuts & seeds,,,
-Stotfold mill Flour wholewheat,,,,0.0025,,Stotfold mill Flour wholewheat,baking,,,
+Linseed golden,,,,0.0064,,Linseed golden ,nuts & seeds,,,
+Stotfold mill flour wholewheat,,,,0.0025,,Stotfold mill Flour wholewheat,baking,,,
 Blades,,,,1,,Blades,bathroom,,,
 Bombay mix,,,,0.006,,Bombay mix,Snacks,,,
 Cocoa nibs organic,,,,0.0215,,Cocoa nibs organic,baking,,,
@@ -957,40 +957,40 @@ Weight:&nbsp; 0.02 kg / 0.04 lb</p>
 </div>
 <p>&nbsp;</p>
 ",,6,https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/05/copper-scourers.jpg,Copper scourer,kitchen,462,copper scrubbers,CLEANING
-Mesh bag ,small,"<p>These certified organic mesh produce bags are ideal for your fruit, veg and herbs. They’re breathable which means you can leave your fruit and veg inside the bag.</p>
+Mesh bag,Small,"<p>These certified organic mesh produce bags are ideal for your fruit, veg and herbs. They’re breathable which means you can leave your fruit and veg inside the bag.</p>
 <p>They’re made responsibly, ethically and by farmers who respect nature and observe the guideline of the Global Organic Textile Standard.</p>
 <p>Produce bags are designed to be used over and over again, unlike the flimsy single use plastic bags pushes at shoppers in supermarkets. These produce bags give you the consumer the power to make a difference and vote with your feet. Be part of the circular economy, not the linear with reusable produce bags.</p>
 ",,2.8,https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/09/mesh-bag-2.jpg,Mesh bag small,bags jars bottles boxes,835:839,Organic cotton mesh bags small,BAGS
-Mesh bag ,medium,"<p>These certified organic mesh produce bags are ideal for your fruit, veg and herbs. They’re breathable which means you can leave your fruit and veg inside the bag.</p>
+Mesh bag,Medium,"<p>These certified organic mesh produce bags are ideal for your fruit, veg and herbs. They’re breathable which means you can leave your fruit and veg inside the bag.</p>
 <p>They’re made responsibly, ethically and by farmers who respect nature and observe the guideline of the Global Organic Textile Standard.</p>
 <p>Produce bags are designed to be used over and over again, unlike the flimsy single use plastic bags pushes at shoppers in supermarkets. These produce bags give you the consumer the power to make a difference and vote with your feet. Be part of the circular economy, not the linear with reusable produce bags.</p>
 ",,3,https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/09/mesh-bag-2.jpg,Mesh bag medium,bags jars bottles boxes,835:838,Organic cotton mesh bags medium,BAGS
-Mesh bag,large,"<p>These certified organic mesh produce bags are ideal for your fruit, veg and herbs. They’re breathable which means you can leave your fruit and veg inside the bag.</p>
+Mesh bag,Large,"<p>These certified organic mesh produce bags are ideal for your fruit, veg and herbs. They’re breathable which means you can leave your fruit and veg inside the bag.</p>
 <p>They’re made responsibly, ethically and by farmers who respect nature and observe the guideline of the Global Organic Textile Standard.</p>
 <p>Produce bags are designed to be used over and over again, unlike the flimsy single use plastic bags pushes at shoppers in supermarkets. These produce bags give you the consumer the power to make a difference and vote with your feet. Be part of the circular economy, not the linear with reusable produce bags.</p>
 ",,3.2,https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/09/mesh-bag-2.jpg,Mesh bag large ,bags jars bottles boxes,835:837,Organic cotton mesh bags large,BAGS
-Cotton bag ,small,"<div class=""woocommerce-product-details__short-description"">
+Cotton bag,Small,"<div class=""woocommerce-product-details__short-description"">
 <p>Cotton Produce bag intended to help you shop without relying on unnecessary single use plastic bags.</p>
 <p>These make fab carriers for loose rice, pasta, oats , muesli and grains/beans. They are washable and weigh next to nothing and fold up perfectly to fit in your handbag.</p>
 <p>All of our cotton produce bags are GOTS certified and produced ethically</p>
 </div>
 ",,2.6,"https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/09/veg-bags.jpg
 https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/09/produce-bag-2.png",Cotton bag small,bags jars bottles boxes,841:844,Organic cotton produce bag small,BAGS
-Cotton bag ,medium,"<div class=""woocommerce-product-details__short-description"">
+Cotton bag,Medium,"<div class=""woocommerce-product-details__short-description"">
 <p>Cotton Produce bag intended to help you shop without relying on unnecessary single use plastic bags.</p>
 <p>These make fab carriers for loose rice, pasta, oats , muesli and grains/beans. They are washable and weigh next to nothing and fold up perfectly to fit in your handbag.</p>
 <p>All of our cotton produce bags are GOTS certified and produced ethically</p>
 </div>
 ",,2.8,"https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/09/veg-bags.jpg
 https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/09/produce-bag-2.png",Cotton bag medium,bags jars bottles boxes,841:843,Organic cotton produce bag medium,BAGS
-Cotton bag,large,"<div class=""woocommerce-product-details__short-description"">
+Cotton bag,Large,"<div class=""woocommerce-product-details__short-description"">
 <p>Cotton Produce bag intended to help you shop without relying on unnecessary single use plastic bags.</p>
 <p>These make fab carriers for loose rice, pasta, oats , muesli and grains/beans. They are washable and weigh next to nothing and fold up perfectly to fit in your handbag.</p>
 <p>All of our cotton produce bags are GOTS certified and produced ethically</p>
 </div>
 ",,3,"https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/09/veg-bags.jpg
 https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/09/produce-bag-2.png",Cotton bag large,bags jars bottles boxes,841:842,Organic cotton produce bag large,BAGS
-Deo ,natural,,"<h5 class=""page-title"">Natural Organic Deodorant Ingredients</h5>
+Deo,Natural,,"<h5 class=""page-title"">Natural Organic Deodorant Ingredients</h5>
 <div class=""rte"">
 <p>The Earth Conscious Natural Deodorant is a totally natural deodorant made in the UK using natural organic ingredients.</p>
 <div>&nbsp;</div>
@@ -1022,7 +1022,7 @@ Denttabs pot x60,,,,3.8,,Denttabs pot x60,Dental,,,
 Milk bottle x 1000ml,,,,1.5,,Milk bottle x 1000ml,bags jars bottles boxes,,,
 Milk bottle x500 ml,,,,1,,Milk bottle x500 ml,bags jars bottles boxes,,,
 Black beans,,,,0.004,,Black beans,grains & beans ,,,
- oats,,,,0.0015,, oats,cereal,,,
+Oats,,,,0.0015,, oats,cereal,,,
 Spaghetti,,,,1.4,,Spaghetti,pasta & rice,,,
 Bamboo turtle muesli,,,,0.0045,,Bamboo turtle muesli,cereal,,,
 Almond milk 500 mls,,,,1.5,,Almond milk 500 mls,Mylk,,,
@@ -1039,7 +1039,7 @@ Mixed nuts,,,,0.023,,Mixed nuts,nuts & seeds,,,
 Hazelnut mylk 1000ml,,,,3.3,,Hazelnut mylk 1000ml,Mylk,,,
 Hazelnut milk 500 ml,,,,1.65,,Hazelnut milk 500 ml,Mylk,,,
 Herbs de provence,,,,0.02,,Herbs de provence,herbs,,,
-Aluminium bottle ,,,,2,,Aluminium bottle ,bags jars bottles boxes,,,
+Aluminium bottle,,,,2,,Aluminium bottle ,bags jars bottles boxes,,,
 Poppy seeds,,,,0.01,,Poppy seeds,nuts & seeds,,,
 Toilet cleaner,,,,0.0036,,Toilet cleaner,washing,,,
 Floor cleaner,,,,0.0056,,Floor cleaner,washing,,,
@@ -1076,18 +1076,18 @@ Cake,,,,1,,Cake,Snacks,,,
 Cranberries,,,,0.012,,Cranberries,fruit,,,
 Bread,,,,3.5,,Bread,Snacks,,,
 Cocoa powder,,,,0.02,,Cocoa powder,baking,,,
-Face pads in glass jar ,,"<p>Limited stock at the moment but more on the way . The pads are square, some come in a pouch or in a handy drawstring bag.&nbsp; Some of the pads have a patterned background while others are plain white. Hopefully, something for everyone’s taste.</p>
+Face pads in glass jar,,"<p>Limited stock at the moment but more on the way . The pads are square, some come in a pouch or in a handy drawstring bag.&nbsp; Some of the pads have a patterned background while others are plain white. Hopefully, something for everyone’s taste.</p>
 <p>Please note the colours and patterns shown in pic may not be what you are sent as pattern and styles do vary.</p>
 ",,12,"https://i0.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/07/36363183_2018872795097043_1223326313624895488_n.jpg
 https://i1.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/07/36397394_2018872791763710_2472991681696235520_n.jpg",Face pads in glass jar ,bathroom,467,Reusable Face pads,bathroom
 Thai sweet chilli,,,,4,,Thai sweet chilli,baking,,,
-chilly food pot,,,,25,,chilly food pot,chilly,,,
-carabiner,,,,3,,carabiner,chilly,,,
+Chilly food pot,,,,25,,chilly food pot,chilly,,,
+Carabiner,,,,3,,carabiner,chilly,,,
 Beauty kubes conditioner,,,,12,,Beauty kubes conditioner,Hair,,,
-Beauty kubes face cream ,,,,12,,Beauty kubes face cream ,bathroom,,,
+Beauty kubes face cream,,,,12,,Beauty kubes face cream ,bathroom,,,
 Beauty cream body cream,,,,10,,Beauty cream body cream,bathroom,,,
 Chilly coffee cup,,,,22,,Chilly coffee cup,chilly,,,
-Red Bush tea,,,,0.03,,Red Bush tea,coffee /tea ,,,
+Red bush tea,,,,0.03,,Red Bush tea,coffee /tea ,,,
 Chocolate buttons,,"<p>1 cup = 280g</p>
 ","<div>
 <div class=""description-label"">Ingredients</div>
@@ -1140,9 +1140,9 @@ Chocolate buttons,,"<p>1 cup = 280g</p>
 </div>
 ",0.016,https://i2.wp.com/bambooturtle.co.uk/wp-content/uploads/2018/05/IMAG0474.jpg,Chocolate buttons,baking,404,Dark choc buttons - Belgium 56%,"BAKING, food"
 Shower gel,,,,0.0145,,Shower gel,bathroom,,,
-Floss Refill,cardamon,,,3.5,,Floss Refill,Dental,,,
-Floss Refill,minty,,,3.5,,,Dental,,,
-Rose Gold 260ml,,,,20,,Rose Gold 260ml,chilly,,,
+Floss refill,Cardamon,,,3.5,,Floss Refill,Dental,,,
+Floss refill,Minty,,,3.5,,,Dental,,,
+Rose gold 260ml,,,,20,,Rose Gold 260ml,chilly,,,
 Stainless steel 260ml,,,,15,,Stainless steel 260ml,chilly,,,
 Matte black/black lid 260ml,,,,17,,Matte black/black lid 260ml,chilly,,,
 Yellow split peas,,,,0.25,,Yellow split peas,grains & beans ,,,

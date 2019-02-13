@@ -1,6 +1,17 @@
 class Product
   HEADERS = %w(name variant short_description long_description price images eposnow_name eposnow_category woocommerce_id woocommerce_name woocommerce_categories)
 
+  def self.prettify_name(name)
+    return if name.nil?
+
+    name
+      .gsub(/[-]/, " ")
+      .gsub(/\s{1,}/, " ")
+      .strip
+      .downcase
+      .capitalize
+  end
+
   def initialize(data)
     if (data.keys - HEADERS).any?
       raise ArgumentError, "Unexpected keys: #{data.keys - HEADERS}"
@@ -11,6 +22,10 @@ class Product
 
   def name
     @data.fetch("name")
+  end
+
+  def variant
+    @data.fetch("variant")
   end
 
   def price
@@ -28,14 +43,18 @@ class Product
   end
 
   def add_woocommerce_data(wc_product)
-    self.class.new(@data.merge(
+    update(
       "woocommerce_id" => wc_product.id,
       "woocommerce_name" => wc_product.name,
       "woocommerce_categories" => wc_product.categories.join(", "),
       "images" => wc_product.images.to_a.join("\n"),
       "short_description" => wc_product.short_description,
       "long_description" => wc_product.long_description,
-    ))
+    )
+  end
+
+  def update(data)
+    self.class.new(@data.merge(data))
   end
 
   def to_csv

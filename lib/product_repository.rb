@@ -4,7 +4,7 @@ class ProductRepository
   include Enumerable
 
   def self.from_csv(filename)
-    new(CSV.open(filename, headers: true))
+    new(CSV.open(filename, headers: true, encoding: "utf-8"))
   end
 
 	def initialize(data)
