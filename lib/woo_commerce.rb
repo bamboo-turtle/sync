@@ -38,10 +38,22 @@ module WooCommerce
       @data.fetch("type") == "variable"
     end
 
+    def short_description
+      @data.fetch("short_description")
+    end
+
+    def long_description
+      @data.fetch("description")
+    end
+
     def price
       unless (value = @data.fetch("price")) == ""
         value.to_f
       end
+    end
+
+    def images
+      Images.new(@data.fetch("images").map { |image| image.fetch("src") })
     end
 
     def variants
@@ -69,10 +81,22 @@ module WooCommerce
       @product.categories
     end
 
+    def short_description
+      @product.short_description
+    end
+
+    def long_description
+      @product.long_description
+    end
+
     def price
       unless (value = @data.fetch("price")) == ""
         value.to_f
       end
+    end
+
+    def images
+      @product.images + Array(@data.fetch("image")).map { |image| image.fetch("src") }
     end
 
     private
@@ -93,6 +117,30 @@ module WooCommerce
 
     def name
       @products.map(&:name).join("|")
+    end
+  end
+
+  class Images
+    include Enumerable
+
+    def initialize(urls)
+      @urls = urls
+        .map { |url| sanitize(url) }
+        .uniq
+    end
+
+    def each(&blk)
+      @urls.each(&blk)
+    end
+
+    def +(other)
+      Images.new(@urls + other.to_a)
+    end
+
+    private
+
+    def sanitize(url)
+      url.sub(/\?.*$/, "")
     end
   end
 end

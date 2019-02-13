@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run --rm -it -v $PWD:/work-dir -w /work-dir ruby:latest rake "$@"

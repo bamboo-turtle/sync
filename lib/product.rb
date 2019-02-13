@@ -1,5 +1,5 @@
 class Product
-  HEADERS = %w(name variant price eposnow_name eposnow_category woocommerce_id woocommerce_name)
+  HEADERS = %w(name variant short_description long_description price images eposnow_name eposnow_category woocommerce_id woocommerce_name woocommerce_categories)
 
   def initialize(data)
     if (data.keys - HEADERS).any?
@@ -31,6 +31,10 @@ class Product
     self.class.new(@data.merge(
       "woocommerce_id" => wc_product.id,
       "woocommerce_name" => wc_product.name,
+      "woocommerce_categories" => wc_product.categories.join(", "),
+      "images" => wc_product.images.to_a.join("\n"),
+      "short_description" => wc_product.short_description,
+      "long_description" => wc_product.long_description,
     ))
   end
 
