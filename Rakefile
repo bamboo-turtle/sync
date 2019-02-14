@@ -5,6 +5,7 @@ require "lib/product_repository"
 require "lib/woo_commerce"
 require "lib/product_processor"
 require "lib/airtable_store"
+require "lib/utils"
 
 desc "Add WooCommerce details to canonical products"
 task :add_wc_info do
@@ -36,6 +37,16 @@ task :prettify_products do
       "name" => Product.prettify_name(product.name),
       "variant" => Product.prettify_name(product.variant)
     ).to_csv
+  end
+end
+
+desc "Clean-up product descriptions"
+task :clean_up_descriptions do
+  ProductProcessor.perform do |product|
+    product.update(
+      "short_description" => Utils.clean_up_description(product.short_description),
+      "long_description" => Utils.clean_up_description(product.long_description),
+    )
   end
 end
 
