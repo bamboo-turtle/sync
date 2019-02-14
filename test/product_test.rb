@@ -17,6 +17,11 @@ class ProductTest < Minitest::Test
     
     assert_nil Product.extract_cup_weight(nil)
     assert_nil Product.extract_cup_weight("")
-    assert_nil Product.extract_cup_weight(%Q{<p>Please refer directly to <a href="https://www.organicup.com/help/" target="_blank" rel="noopener">Organicup</a> website for more information and help.</p>})
+    assert_nil Product.extract_cup_weight(%Q{<p><a href="https://www.organicup.com/help/">Organicup</a>.</p>})
+  end
+
+  def test_images
+    product = Product.new("images" => "url1\nurl2\n\nurl3")
+    assert_equal %w(url1 url2 url3), product.images
   end
 end

@@ -1,5 +1,5 @@
 class Product
-  HEADERS = %w(name variant short_description long_description price images cup_weight eposnow_name eposnow_category woocommerce_id woocommerce_name woocommerce_categories)
+  HEADERS = %w(name variant short_description long_description price images cup_weight eposnow_name eposnow_category woocommerce_id woocommerce_name woocommerce_categories airtable_id)
 
   def self.prettify_name(name)
     return if name.nil?
@@ -48,12 +48,42 @@ class Product
     end
   end
 
+  def images
+    @data.fetch("images")
+      .to_s
+      .each_line
+      .map(&:strip)
+      .reject(&:empty?)
+  end
+
+  def cup_weight
+    if value = @data.fetch("cup_weight")
+      value.to_i
+    end
+  end
+
+  def eposnow_name
+    @data.fetch("eposnow_name")
+  end
+
+  def eposnow_category
+    @data.fetch("eposnow_category")
+  end
+
   def woocommerce_id
     @data.fetch("woocommerce_id")
   end
 
   def woocommerce_name
     @data.fetch("woocommerce_name")
+  end
+
+  def woocommerce_categories
+    @data.fetch("woocommerce_categories")
+  end
+
+  def airtable_id
+    @data.fetch("airtable_id")
   end
 
   def add_woocommerce_data(wc_product)

@@ -4,6 +4,7 @@ require "lib/product"
 require "lib/product_repository"
 require "lib/woo_commerce"
 require "lib/product_processor"
+require "lib/airtable_store"
 
 desc "Add WooCommerce details to canonical products"
 task :add_wc_info do
@@ -47,5 +48,13 @@ task :populate_cup_weight do
         Product.extract_cup_weight(product.long_description)
       ].compact.first
     )
+  end
+end
+
+desc "Upload to Airtable"
+task :upload_to_airtable do
+  store = AirtableStore.new("Products")
+  ProductProcessor.perform do |product|
+    store.store(product)
   end
 end
