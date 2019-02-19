@@ -1,5 +1,7 @@
 class Product
-  HEADERS = %w(name variant short_description long_description price images cup_weight eposnow_name eposnow_category woocommerce_id woocommerce_name woocommerce_categories airtable_id)
+  HEADERS = %w(name variant short_description long_description price images cup_weight category eposnow_name eposnow_category woocommerce_id woocommerce_name woocommerce_categories airtable_id)
+
+  attr_reader :category
 
   def self.prettify_name(name)
     return if name.nil?
@@ -18,12 +20,13 @@ class Product
     weight && weight.to_i
   end
 
-  def initialize(data)
+  def initialize(data, category = nil)
     if (data.keys - HEADERS).any?
       raise ArgumentError, "Unexpected keys: #{data.keys - HEADERS}"
     end
 
     @data = data
+    @category = category
   end
 
   def name
@@ -62,6 +65,10 @@ class Product
     end
   end
 
+  def category_name
+    @data.fetch("category")
+  end
+
   def eposnow_name
     @data.fetch("eposnow_name")
   end
@@ -97,8 +104,8 @@ class Product
     )
   end
 
-  def update(data)
-    self.class.new(@data.merge(data))
+  def update(data, category = @category)
+    self.class.new(@data.merge(data), category)
   end
 
   def to_csv

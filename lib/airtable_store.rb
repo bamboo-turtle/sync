@@ -16,7 +16,10 @@ class AirtableStore
       (@product.class::HEADERS - %w(airtable_id))
         .map { |header| [header, @product.public_send(header)] }
         .to_h
-        .then { |fields| fields.merge("images" => fields["images"].map { |url| { "url" => url } }) }
+        .then { |fields| fields.merge(
+          "images"   => fields["images"].map { |url| { "url" => url } },
+          "category" => Array(fields["category"] && fields["category"].airtable_id),
+        ) }
     end
   end
 
@@ -37,7 +40,7 @@ class AirtableStore
     @table_name = table_name
   end
 
-  def store(record)
+  def write(record, field_names = [])
     request = if record.airtable_id
       Net::HTTP::Patch.new(URI("#{url}/#{record.airtable_id}"))
     else
@@ -47,13 +50,16 @@ class AirtableStore
     request["Authorization"] = "Bearer #{API_KEY}"
     request["Content-Type"] = "application/json"
 
-    request.body = {
-      "fields" => self.class.const_get(record.class.name).new(record).fields
-    }.to_json
+    fields = self.class.const_get(record.class.name).new(record).fields
+    if field_names.any?
+      fields = fields.slice(*field_names)
+    end
+
+    request.body = { "fields" => fields }.to_json
 
     http = Net::HTTP.new(url.hostname, url.port)
     http.use_ssl = true
-    # http.set_debug_output($stdout)
+    http.set_debug_output($stdout)
     response = http.start { http.request(request) }
 
     record.update("airtable_id" => JSON.parse(response.body).fetch("id"))

@@ -25,6 +25,10 @@ class Category
     @data.fetch("eposnow_name")
   end
 
+  def eposnow_names
+    eposnow_name.to_s.split(",")
+  end
+
   def woocommerce_id
     @data.fetch("woocommerce_id")
   end

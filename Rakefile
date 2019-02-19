@@ -7,6 +7,7 @@ require "lib/woo_commerce"
 require "lib/product_processor"
 require "lib/airtable_store"
 require "lib/utils"
+require "lib/csv_store"
 
 desc "Add WooCommerce details to canonical products"
 task :add_wc_info do
@@ -67,16 +68,6 @@ desc "Upload to Airtable"
 task :upload_to_airtable do
   store = AirtableStore.new("Products")
   ProductProcessor.perform do |product|
-    store.store(product)
-  end
-end
-
-task :upload_categories_to_airtable do
-  store = AirtableStore.new("Categories")
-  puts Category::HEADERS.to_csv
-  categories = CSV.open("data/categories.csv", headers: true, encoding: "utf-8").map { |record| Category.new(record.to_h) }
-   
-  categories.each do |category|
-    puts store.store(category).to_csv
+    store.write(product, %w(category))
   end
 end

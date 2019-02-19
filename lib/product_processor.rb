@@ -6,7 +6,7 @@ class ProductProcessor
   end
 
   def initialize
-    @products = ProductRepository.from_csv(File.join("data", "products.csv"))
+    @products = CSVStore.products
   end
 
   def perform(&blk)
