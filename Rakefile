@@ -2,6 +2,7 @@ $:.unshift(Dir.pwd)
 
 require "lib/product"
 require "lib/product_repository"
+require "lib/category"
 require "lib/woo_commerce"
 require "lib/product_processor"
 require "lib/airtable_store"
@@ -67,5 +68,15 @@ task :upload_to_airtable do
   store = AirtableStore.new("Products")
   ProductProcessor.perform do |product|
     store.store(product)
+  end
+end
+
+task :upload_categories_to_airtable do
+  store = AirtableStore.new("Categories")
+  puts Category::HEADERS.to_csv
+  categories = CSV.open("data/categories.csv", headers: true, encoding: "utf-8").map { |record| Category.new(record.to_h) }
+   
+  categories.each do |category|
+    puts store.store(category).to_csv
   end
 end
