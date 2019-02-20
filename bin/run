@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run --rm -it -v $PWD:/work-dir -w /work-dir -e BUNDLE_PATH=/work-dir/.bundle ruby:latest "$@"
+docker run --rm -it -v $PWD:/work-dir -w /work-dir -e BUNDLE_PATH=/work-dir/.bundle --env-file .direnv ruby:latest "$@"
