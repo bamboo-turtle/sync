@@ -7,6 +7,38 @@ class AirtableStore
   DATABASE_ID = "appUXiZEB77F0sbcQ"
   API_KEY = "key27JmO7MIe5Q9Nn"
 
+  module Tables
+    PRODUCTS = "Products"
+    CATEGORIES = "Categories"
+  end
+
+  def self.categories
+    new(Tables::CATEGORIES).read.map { |record|
+      fields = record.fetch("fields").slice(*::Category::HEADERS)
+
+      ::Category.new(
+        fields
+          .merge("airtable_id" => record.fetch("id"))
+          .merge("image" => fields["image"] && fields["image"][0].fetch("url"))
+      )
+    } 
+  end
+
+  def self.products
+    categories = self.categories.map { |c| [c.airtable_id, c] }.to_h
+
+    new(Tables::PRODUCTS).read.map { |record|
+      fields = record.fetch("fields")
+
+      ::Product.new(
+        fields
+          .merge("airtable_id" => record.fetch("id"))
+          .merge("images" => Array(fields["images"]).map { |image| image.fetch("url") })
+          .merge("category" => categories.fetch(fields.fetch("category")[0]))
+      )
+    }
+  end
+
   class Product
     def initialize(product)
       @product = product
@@ -40,6 +72,20 @@ class AirtableStore
     @table_name = table_name
   end
 
+  def read
+    records = []
+    response = {}
+
+    begin
+      request = Net::HTTP::Get.new(url.merge("?#{URI.encode_www_form(offset: response["offset"])}"))
+      response = perform_request(request)
+      records += response.fetch("records")
+    end while response["offset"]
+
+    records
+
+  end
+
   def write(record, field_names = [])
     request = if record.airtable_id
       Net::HTTP::Patch.new(URI("#{url}/#{record.airtable_id}"))
@@ -47,25 +93,28 @@ class AirtableStore
       Net::HTTP::Post.new(url)
     end
 
-    request["Authorization"] = "Bearer #{API_KEY}"
-    request["Content-Type"] = "application/json"
-
     fields = self.class.const_get(record.class.name).new(record).fields
     if field_names.any?
       fields = fields.slice(*field_names)
     end
-
     request.body = { "fields" => fields }.to_json
 
-    http = Net::HTTP.new(url.hostname, url.port)
-    http.use_ssl = true
-    http.set_debug_output($stdout)
-    response = http.start { http.request(request) }
-
-    record.update("airtable_id" => JSON.parse(response.body).fetch("id"))
+    record.update("airtable_id" => perform_request(request).fetch("id"))
   end
 
   def url
     @url ||= URI(URI.join(BASE_URL, "#{DATABASE_ID}/", URI.escape(@table_name)))
+  end
+
+  private
+
+  def perform_request(request)
+    request["Authorization"] = "Bearer #{API_KEY}"
+    request["Content-Type"] = "application/json"
+
+    http = Net::HTTP.new(url.hostname, url.port)
+    http.use_ssl = true
+    http.set_debug_output($stdout)
+    JSON.parse(http.start { http.request(request) }.body)
   end
 end

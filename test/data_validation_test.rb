@@ -1,4 +1,4 @@
-require "minitest/autorun"
+require "test_helper"
 require "product_repository"
 require "product"
 require "woo_commerce"

@@ -20,53 +20,48 @@ class Product
     weight && weight.to_i
   end
 
-  def initialize(data, category = nil)
+  def initialize(data)
     if (data.keys - HEADERS).any?
       raise ArgumentError, "Unexpected keys: #{data.keys - HEADERS}"
     end
 
     @data = data
-    @category = category
   end
 
   def name
-    @data.fetch("name")
+    @data["name"]
   end
 
   def variant
-    @data.fetch("variant")
+    @data["variant"]
   end
 
   def short_description
-    @data.fetch("short_description")
+    @data["short_description"]
   end
 
   def long_description
-    @data.fetch("long_description")
+    @data["long_description"]
   end
 
   def price
-    if value = @data.fetch("price")
+    if value = @data["price"]
       value.to_f
     end
   end
 
   def images
-    @data.fetch("images")
-      .to_s
-      .each_line
-      .map(&:strip)
-      .reject(&:empty?)
+    @data["images"]
   end
 
   def cup_weight
-    if value = @data.fetch("cup_weight")
+    if value = @data["cup_weight"]
       value.to_i
     end
   end
 
-  def category_name
-    @data.fetch("category")
+  def category
+    @data["category"]
   end
 
   def eposnow_name
@@ -78,19 +73,21 @@ class Product
   end
 
   def woocommerce_id
-    @data.fetch("woocommerce_id")
+    if value = @data["woocommerce_id"]
+      value.to_s
+    end
   end
 
   def woocommerce_name
-    @data.fetch("woocommerce_name")
+    @data["woocommerce_name"]
   end
 
   def woocommerce_categories
-    @data.fetch("woocommerce_categories")
+    @data["woocommerce_categories"]
   end
 
   def airtable_id
-    @data.fetch("airtable_id")
+    @data["airtable_id"]
   end
 
   def add_woocommerce_data(wc_product)
@@ -104,8 +101,8 @@ class Product
     )
   end
 
-  def update(data, category = @category)
-    self.class.new(@data.merge(data), category)
+  def update(data)
+    self.class.new(@data.merge(data))
   end
 
   def to_csv

@@ -1,5 +1,7 @@
 $:.unshift(Dir.pwd)
 
+require "bundler/setup"
+
 require "lib/product"
 require "lib/product_repository"
 require "lib/category"
@@ -69,5 +71,22 @@ task :upload_to_airtable do
   store = AirtableStore.new("Products")
   ProductProcessor.perform do |product|
     store.write(product, %w(category))
+  end
+end
+
+desc "Sync products in WooCommerce with Airtable"
+task :sync_airtable_and_woocommerce do
+  wc_store = WooCommerce::Store.new(api_params: [
+    ENV["WC_URL"],
+    ENV["WC_KEY"],
+    ENV["WC_SECRET"],
+    { httparty_args: { debug_output: $stdout } }
+  ])
+  airtable = AirtableStore.new(AirtableStore::Tables::PRODUCTS)
+  products = AirtableStore.products
+
+  products.each do |product|
+    next if product.variant
+    airtable.write(wc_store.store_product(product))
   end
 end
