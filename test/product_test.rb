@@ -1,5 +1,4 @@
-require "test_helper"
-require "product"
+require File.join(Dir.pwd, "test", "test_helper")
 
 class ProductTest < Minitest::Test
   def test_prettify_name

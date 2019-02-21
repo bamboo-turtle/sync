@@ -1,5 +1,5 @@
-require "test_helper"
-require "utils"
+require File.join(Dir.pwd, "test", "test_helper")
+require "lib/utils"
 
 class UtilsTest < Minitest::Test
   def test_clean_up_description

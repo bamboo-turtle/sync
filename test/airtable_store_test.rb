@@ -1,7 +1,5 @@
-require "test_helper"
-require "airtable_store"
-require "category"
-require "product"
+require File.join(Dir.pwd, "test", "test_helper")
+require "lib/airtable_store"
 
 class AirtableStoreTest < Minitest::Test
   def product_data

@@ -1,7 +1,5 @@
-require "test_helper"
-require "woo_commerce"
-require "category"
-require "product"
+require File.join(Dir.pwd, "test", "test_helper")
+require "lib/woo_commerce"
 
 class WooCommerceTest < Minitest::Test
   DATA_DIR = File.expand_path(File.join(File.dirname(__FILE__), "..", "data"))

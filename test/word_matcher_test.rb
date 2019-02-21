@@ -1,5 +1,5 @@
-require "test_helper"
-require "word_matcher"
+require File.join(Dir.pwd, "test", "test_helper")
+require "lib/word_matcher"
 
 class WordMatcherTest < Minitest::Test
   def setup

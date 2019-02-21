@@ -1,7 +1,6 @@
-require "test_helper"
-require "product_repository"
-require "product"
-require "woo_commerce"
+require File.join(Dir.pwd, "test", "test_helper")
+require "lib/product_repository"
+require "lib/woo_commerce"
 
 class DataValidationTest < Minitest::Test
   DATA_DIR = File.expand_path(File.join(File.dirname(__FILE__), "..", "data"))
