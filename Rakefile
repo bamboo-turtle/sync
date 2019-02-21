@@ -85,8 +85,7 @@ task :sync_airtable_and_woocommerce do
   airtable = AirtableStore.new(AirtableStore::Tables::PRODUCTS)
   products = AirtableStore.products
 
-  products.each do |product|
-    next if product.variant
-    airtable.write(wc_store.store_product(product))
+  wc_store.store_products(products).each do |product|
+    airtable.write(product)
   end
 end

@@ -65,11 +65,11 @@ class Product
   end
 
   def eposnow_name
-    @data.fetch("eposnow_name")
+    @data["eposnow_name"]
   end
 
   def eposnow_category
-    @data.fetch("eposnow_category")
+    @data["eposnow_category"]
   end
 
   def woocommerce_id
