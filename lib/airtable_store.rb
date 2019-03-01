@@ -39,6 +39,20 @@ class AirtableStore
     }
   end
 
+  def self.product(id)
+    categories = self.categories.map { |c| [c.airtable_id, c] }.to_h
+
+    record = new(Tables::PRODUCTS).read_one(id)
+    fields = record.fetch("fields")
+
+    ::Product.new(
+      fields
+        .merge("airtable_id" => record.fetch("id"))
+        .merge("images" => Array(fields["images"]).map { |image| image.fetch("url") })
+        .merge("category" => categories.fetch(fields.fetch("category")[0]))
+    )
+  end
+
   class Product
     def initialize(product)
       @product = product
@@ -83,7 +97,10 @@ class AirtableStore
     end while response["offset"]
 
     records
+  end
 
+  def read_one(id)
+    perform_request(Net::HTTP::Get.new(URI("#{url}/#{id}")))
   end
 
   def write(record, field_names = [])

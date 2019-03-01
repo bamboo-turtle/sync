@@ -2,8 +2,16 @@ require File.join(Dir.pwd, "test", "test_helper")
 require "lib/airtable_store"
 
 class AirtableStoreTest < Minitest::Test
+  include Fixtures
+
   def product_data
     Product::HEADERS.map { |key| [key, nil] }.to_h
+  end
+
+  def fixture_categories
+    mock_store = Minitest::Mock.new
+    mock_store.expect(:read, json_fixture("airtable_categories").fetch("records"))
+    AirtableStore.stub(:new, mock_store) { AirtableStore.categories }
   end
 
   def test_product_fields
@@ -41,9 +49,8 @@ class AirtableStoreTest < Minitest::Test
   end
 
   def test_retrieve_categories
-    records = JSON.parse(File.read(File.join("test", "fixtures", "airtable_categories.json")))["records"]
     mock_store = Minitest::Mock.new
-    mock_store.expect(:read, records)
+    mock_store.expect(:read, json_fixture("airtable_categories").fetch("records"))
 
     AirtableStore.stub(:new, mock_store) do
       categories = AirtableStore.categories
@@ -59,16 +66,10 @@ class AirtableStoreTest < Minitest::Test
   end
 
   def test_retrieve_products
-    records = JSON.parse(File.read(File.join("test", "fixtures", "airtable_categories.json")))["records"]
     mock_store = Minitest::Mock.new
-    mock_store.expect(:read, records)
-    categories = AirtableStore.stub(:new, mock_store) { AirtableStore.categories }
+    mock_store.expect(:read, json_fixture("airtable_products").fetch("records"))
 
-    records = JSON.parse(File.read(File.join("test", "fixtures", "airtable_products.json")))["records"]
-    mock_store = Minitest::Mock.new
-    mock_store.expect(:read, records)
-
-    AirtableStore.stub(:categories, categories) do
+    AirtableStore.stub(:categories, fixture_categories) do
       AirtableStore.stub(:new, mock_store) do
         products = AirtableStore.products
         assert_equal 100, products.size
@@ -88,6 +89,20 @@ class AirtableStoreTest < Minitest::Test
         assert_equal "beeswax wrap pouch ", product.eposnow_name
         assert_equal "579:590", product.woocommerce_id
         assert_equal "bees wax wraps sandwich-pouch", product.woocommerce_name
+      end
+    end
+  end
+
+  def test_retrieve_product
+    record_id = "record-id"
+
+    mock_store = Minitest::Mock.new
+    mock_store.expect(:read_one, json_fixture("airtable_products").fetch("records")[0], [record_id])
+
+    AirtableStore.stub(:categories, fixture_categories) do
+      AirtableStore.stub(:new, mock_store) do
+        product = AirtableStore.product(record_id)
+        assert product.airtable_id
       end
     end
   end
