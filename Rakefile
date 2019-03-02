@@ -7,7 +7,6 @@ require "lib/product_repository"
 require "lib/category"
 require "lib/woo_commerce"
 require "lib/product_processor"
-require "lib/airtable_store"
 require "lib/utils"
 require "lib/csv_store"
 
@@ -63,29 +62,5 @@ task :populate_cup_weight do
         Product.extract_cup_weight(product.long_description)
       ].compact.first
     )
-  end
-end
-
-desc "Upload to Airtable"
-task :upload_to_airtable do
-  store = AirtableStore.new("Products")
-  ProductProcessor.perform do |product|
-    store.write(product, %w(category))
-  end
-end
-
-desc "Sync products in WooCommerce with Airtable"
-task :sync_airtable_and_woocommerce do
-  wc_store = WooCommerce::Store.new(api_params: [
-    ENV["WC_URL"],
-    ENV["WC_KEY"],
-    ENV["WC_SECRET"],
-    { httparty_args: { debug_output: $stdout } }
-  ])
-  airtable = AirtableStore.new(AirtableStore::Tables::PRODUCTS)
-  products = AirtableStore.products
-
-  wc_store.store_products(products).each do |product|
-    airtable.write(product)
   end
 end
