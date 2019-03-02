@@ -1,8 +1,8 @@
 require File.join(Dir.pwd, "test", "test_helper")
-require "lib/syncroniser"
+require "lib/synchroniser"
 
-class SyncroniserTest < Minitest::Test
-  def test_syncronise_product
+class SynchroniserTest < Minitest::Test
+  def test_synchronise_product
     wc_store = Minitest::Mock.new
     airtable = Minitest::Mock.new
     product = :product
@@ -12,7 +12,7 @@ class SyncroniserTest < Minitest::Test
       Airtable::Store.stub(:new, airtable) do
         airtable.expect(:product, product, [airtable_id])
         wc_store.expect(:store_products, [:updated_product], [[product]])
-        Syncroniser.syncronise_product(airtable_id)
+        Synchroniser.synchronise_product(airtable_id)
       end
     end
 

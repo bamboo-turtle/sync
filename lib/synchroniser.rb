@@ -1,8 +1,8 @@
 require "lib/airtable/store"
 require "lib/woo_commerce"
 
-module Syncroniser
-  def self.syncronise_product(id)
+module Synchroniser
+  def self.synchronise_product(id)
     airtable = Airtable::Store.new(
       database_id: ENV["AIRTABLE_DATABASE"],
       api_key: ENV["AIRTABLE_API_KEY"]
