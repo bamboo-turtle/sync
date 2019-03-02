@@ -25,6 +25,6 @@ module Synchroniser
       key: ENV["WOOCOMMERCE_KEY"],
       secret: ENV["WOOCOMMERCE_SECRET"]
     )
-    wc.update_variable_product(airtable.products_by_id(ids))
+    wc.update_variable_product(VariableProduct.new(airtable.products_by_id(ids)))
   end
 end

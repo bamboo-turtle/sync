@@ -24,13 +24,16 @@ class SynchroniserTest < Minitest::Test
     wc = Minitest::Mock.new
     airtable = Minitest::Mock.new
     products = [:product1, :product2]
+    variable_product = :variable_product
     airtable_ids = %w(id-1 id-2)
 
     WooCommerce::Store.stub(:new, wc) do
       Airtable::Store.stub(:new, airtable) do
-        airtable.expect(:products_by_id, products, [airtable_ids])
-        wc.expect(:update_variable_product, nil, [products])
-        Synchroniser.synchronise_variable_product(airtable_ids)
+        VariableProduct.stub(:new, variable_product) do
+          airtable.expect(:products_by_id, products, [airtable_ids])
+          wc.expect(:update_variable_product, nil, [variable_product])
+          Synchroniser.synchronise_variable_product(airtable_ids)
+        end
       end
     end
 

@@ -8,6 +8,7 @@ $:.unshift(Dir.pwd)
 
 require "lib/category"
 require "lib/product"
+require "lib/variable_product"
 
 module Fixtures
   def json_fixture(name)
