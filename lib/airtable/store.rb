@@ -15,7 +15,7 @@ module Airtable
     def categories
       response = perform_request(Net::HTTP::Get.new("#{url}/#{Tables::CATEGORIES}"))
       response.fetch("records").map { |record|
-        fields = record.fetch("fields").slice(*Category::HEADERS)
+        fields = record.fetch("fields").slice(*Category::ATTRS)
 
         Category.new(
           fields
