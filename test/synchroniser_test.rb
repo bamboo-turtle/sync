@@ -3,20 +3,20 @@ require "lib/synchroniser"
 
 class SynchroniserTest < Minitest::Test
   def test_synchronise_product
-    wc_store = Minitest::Mock.new
+    wc = Minitest::Mock.new
     airtable = Minitest::Mock.new
     product = :product
     airtable_id = "airtable-id"
 
-    WooCommerce::Store.stub(:new, wc_store) do
+    WooCommerce::Store.stub(:new, wc) do
       Airtable::Store.stub(:new, airtable) do
         airtable.expect(:product, product, [airtable_id])
-        wc_store.expect(:store_products, [:updated_product], [[product]])
+        wc.expect(:update_product, :updated_product, [product])
         Synchroniser.synchronise_product(airtable_id)
       end
     end
 
     airtable.verify
-    wc_store.verify
+    wc.verify
   end
 end

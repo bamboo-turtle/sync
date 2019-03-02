@@ -1,44 +1,19 @@
 require File.join(Dir.pwd, "test", "test_helper")
-require "lib/woo_commerce"
+require "lib/woo_commerce/store"
 
 class WooCommerceStoreTest < Minitest::Test
-  def test_create_product
-    product = build_product
-    refute product.woocommerce_id
-
-    api = Minitest::Mock.new
-    api.expect(:new, api, [:api_params])
-    wc = WooCommerce::Store.new(api: api, api_params: :api_params)
-
-    response = Minitest::Mock.new
-    response.expect(:parsed_response, { "product" => { "id" => "product-1" } })
-    api.expect(:post, response, ["products", { product: {
-      title: product.name,
-      type: "simple",
-      status: "draft",
-      price: product.price,
-      short_description: product.short_description,
-      description: "<pre>#{product.long_description}</pre>",
-      enable_html_description: true,
-      categories: [product.category.woocommerce_id],
-      images: [{ src: product.images[0], position: 0 }],
-    }}])
-    products = wc.store_products([product])
-    assert_equal 1, products.size
-    assert_equal "product-1", products[0].woocommerce_id
+  def setup
+    @api = Minitest::Mock.new
+    @api.expect(:new, @api, [:url, :key, :secret])
+    @wc = WooCommerce::Store.new(api: @api, url: :url, key: :key, secret: :secret)
   end
 
   def test_update_product
     product = build_product("woocommerce_id" => "product-1")
-    assert product.woocommerce_id
-
-    api = Minitest::Mock.new
-    api.expect(:new, api, [:api_params])
-    wc = WooCommerce::Store.new(api: api, api_params: :api_params)
 
     response = Minitest::Mock.new
     response.expect(:parsed_response, { "product" => { "id" => "product-1" } })
-    api.expect(:put, response, ["products/product-1", { product: {
+    @api.expect(:put, response, ["products/product-1", { product: {
       title: product.name,
       type: "simple",
       status: "draft",
@@ -49,7 +24,50 @@ class WooCommerceStoreTest < Minitest::Test
       categories: [product.category.woocommerce_id],
       images: [{ src: product.images[0], position: 0 }],
     }}])
-    products = wc.store_products([product])
+    updated_product = @wc.update_product(product)
+    assert_equal "product-1", updated_product.woocommerce_id
+  end
+
+  def test_create_product
+    product = build_product
+    refute product.woocommerce_id
+
+    response = Minitest::Mock.new
+    response.expect(:parsed_response, { "product" => { "id" => "product-1" } })
+    @api.expect(:post, response, ["products", { product: {
+      title: product.name,
+      type: "simple",
+      status: "draft",
+      price: product.price,
+      short_description: product.short_description,
+      description: "<pre>#{product.long_description}</pre>",
+      enable_html_description: true,
+      categories: [product.category.woocommerce_id],
+      images: [{ src: product.images[0], position: 0 }],
+    }}])
+    products = @wc.store_products([product])
+    assert_equal 1, products.size
+    assert_equal "product-1", products[0].woocommerce_id
+  end
+
+  def test_update_product_via_store_products
+    product = build_product("woocommerce_id" => "product-1")
+    assert product.woocommerce_id
+
+    response = Minitest::Mock.new
+    response.expect(:parsed_response, { "product" => { "id" => "product-1" } })
+    @api.expect(:put, response, ["products/product-1", { product: {
+      title: product.name,
+      type: "simple",
+      status: "draft",
+      price: product.price,
+      short_description: product.short_description,
+      description: "<pre>#{product.long_description}</pre>",
+      enable_html_description: true,
+      categories: [product.category.woocommerce_id],
+      images: [{ src: product.images[0], position: 0 }],
+    }}])
+    products = @wc.store_products([product])
     assert_equal 1, products.size
     assert_equal "product-1", products[0].woocommerce_id
   end
@@ -60,10 +78,6 @@ class WooCommerceStoreTest < Minitest::Test
       build_product("variant" => "variant 2", "images" => ["http://example.com/image2.jpg"]),
     ]
 
-    api = Minitest::Mock.new
-    api.expect(:new, api, [:api_params])
-    wc = WooCommerce::Store.new(api: api, api_params: :api_params)
-
     response = Minitest::Mock.new
     response.expect(:parsed_response, { "product" => { 
       "id" => "product-1",
@@ -72,7 +86,7 @@ class WooCommerceStoreTest < Minitest::Test
         { "id" => "variation-2" },
       ],
     } })
-    api.expect(:post, response, ["products", { product: {
+    @api.expect(:post, response, ["products", { product: {
       title: products[0].name,
       type: "variable",
       status: "draft",
@@ -116,7 +130,7 @@ class WooCommerceStoreTest < Minitest::Test
         },
       ]
     }}])
-    products = wc.store_products(products)
+    products = @wc.store_products(products)
 
     assert_equal 2, products.size
     assert_equal "product-1:variation-1", products[0].woocommerce_id
@@ -129,10 +143,6 @@ class WooCommerceStoreTest < Minitest::Test
       build_product("variant" => "variant 2", "images" => ["http://example.com/image2.jpg"], "woocommerce_id" => "product-1:variant-2"),
     ]
 
-    api = Minitest::Mock.new
-    api.expect(:new, api, [:api_params])
-    wc = WooCommerce::Store.new(api: api, api_params: :api_params)
-
     response = Minitest::Mock.new
     response.expect(:parsed_response, { "product" => { 
       "id" => "product-1",
@@ -141,7 +151,7 @@ class WooCommerceStoreTest < Minitest::Test
         { "id" => "variation-2" },
       ],
     } })
-    api.expect(:put, response, ["products/product-1", { product: {
+    @api.expect(:put, response, ["products/product-1", { product: {
       title: products[0].name,
       type: "variable",
       status: "draft",
@@ -185,7 +195,7 @@ class WooCommerceStoreTest < Minitest::Test
         },
       ]
     }}])
-    products = wc.store_products(products)
+    products = @wc.store_products(products)
 
     assert_equal 2, products.size
     assert_equal "product-1:variation-1", products[0].woocommerce_id

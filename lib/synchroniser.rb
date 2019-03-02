@@ -1,5 +1,5 @@
 require "lib/airtable/store"
-require "lib/woo_commerce"
+require "lib/woo_commerce/store"
 
 module Synchroniser
   def self.synchronise_product(id)
@@ -7,12 +7,11 @@ module Synchroniser
       database_id: ENV["AIRTABLE_DATABASE"],
       api_key: ENV["AIRTABLE_API_KEY"]
     )
-    wc_store = WooCommerce::Store.new(api_params: [
-      ENV["WC_URL"],
-      ENV["WC_KEY"],
-      ENV["WC_SECRET"],
-      { httparty_args: { debug_output: $stdout } }
-    ])
-    wc_store.store_products([airtable.product(id)])
+    wc = WooCommerce::Store.new(
+      url: ENV["WOOCOMMERCE_URL"],
+      key: ENV["WOOCOMMERCE_KEY"],
+      secret: ENV["WOOCOMMERCE_SECRET"]
+    )
+    wc.update_product(airtable.product(id))
   end
 end
