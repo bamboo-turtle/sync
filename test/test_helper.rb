@@ -1,5 +1,8 @@
+require "bundler"
+Bundler.setup(:default, :test)
+
 require "minitest/autorun"
-require "bundler/setup"
+require "webmock/minitest"
 
 $:.unshift(Dir.pwd)
 
@@ -11,4 +14,3 @@ module Fixtures
     JSON.parse(File.read(File.join("test", "fixtures", "#{name}.json")))
   end
 end
-

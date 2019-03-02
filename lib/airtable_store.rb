@@ -69,19 +69,6 @@ class AirtableStore
     end
   end
 
-  class Category
-    def initialize(category)
-      @category = category
-    end
-
-    def fields
-      (@category.class::HEADERS - %w(airtable_id))
-        .map { |header| [header, @category.public_send(header)] }
-        .to_h
-        .then { |fields| fields.merge("image" => Array(fields["image"]).map { |url| { "url" => fields["image"] } }) }
-    end
-  end
-
   def initialize(table_name)
     @table_name = table_name
   end
