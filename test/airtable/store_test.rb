@@ -9,8 +9,7 @@ class AirtableStoreTest < Minitest::Test
   end
 
   def test_retrieve_categories
-    stub_request(:get, "#{Airtable::Store::BASE_URL}/database-id/Categories")
-      .to_return(body: json_fixture("airtable_categories").to_json)
+    stub_categories_request
 
     categories = @airtable.categories
     assert_equal 19, categories.size
@@ -24,8 +23,7 @@ class AirtableStoreTest < Minitest::Test
   end
 
   def test_retrieve_product
-    stub_request(:get, "#{Airtable::Store::BASE_URL}/database-id/Categories")
-      .to_return(body: json_fixture("airtable_categories").to_json)
+    stub_categories_request
 
     fixture = json_fixture("airtable_products")
       .fetch("records")
@@ -51,9 +49,8 @@ class AirtableStoreTest < Minitest::Test
     assert_equal "bees wax wraps sandwich-pouch", product.woocommerce_name
   end
 
-  def test_retrieve_products
-    stub_request(:get, "#{Airtable::Store::BASE_URL}/database-id/Categories")
-      .to_return(body: json_fixture("airtable_categories").to_json)
+  def test_retrieve_all_products
+    stub_categories_request
 
     stub_request(:get, "#{Airtable::Store::BASE_URL}/database-id/Products?offset")
       .to_return(body: json_fixture("airtable_products").to_json)
@@ -63,5 +60,24 @@ class AirtableStoreTest < Minitest::Test
 
     product = products.find { |p| p.name == "Beeswax wrap" }
     assert_equal "rec0r31fsA327CW2G", product.airtable_id
+  end
+
+  def test_retrieve_products_by_id
+    stub_categories_request
+
+    stub_request(:get, "#{Airtable::Store::BASE_URL}/database-id/Products?filterByFormula=OR(RECORD_ID()='id-1',RECORD_ID()='id-2')")
+      .to_return(body: {
+          records: json_fixture("airtable_products").fetch("records")[0, 2]
+        }.to_json)
+
+    products = @airtable.products_by_id(%w(id-1 id-2))
+    assert_equal 2, products.size
+    assert products[0].airtable_id
+    assert products[1].airtable_id
+  end
+
+  def stub_categories_request
+    stub_request(:get, "#{Airtable::Store::BASE_URL}/database-id/Categories")
+      .to_return(body: json_fixture("airtable_categories").to_json)
   end
 end

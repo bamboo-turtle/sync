@@ -62,6 +62,25 @@ module Airtable
       }
     end
 
+    def products_by_id(ids)
+      categories = self.categories.map { |c| [c.airtable_id, c] }.to_h
+
+      formula = "OR(#{ids.map { |id| "RECORD_ID()='#{id}'" }.join(",")})"
+      records = perform_request(Net::HTTP::Get.new("#{url}/#{Tables::PRODUCTS}?#{URI.encode_www_form(filterByFormula: formula)}"))
+        .fetch("records")
+
+      records.map { |record|
+        fields = record.fetch("fields")
+
+        Product.new(
+          fields
+            .merge("airtable_id" => record.fetch("id"))
+            .merge("images" => Array(fields["images"]).map { |image| image.fetch("url") })
+            .merge("category" => categories.fetch(fields.fetch("category")[0]))
+        )
+      }
+    end
+
     private
 
     def perform_request(request)

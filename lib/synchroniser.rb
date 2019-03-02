@@ -14,4 +14,17 @@ module Synchroniser
     )
     wc.update_simple_product(airtable.product(id))
   end
+
+  def self.synchronise_variable_product(ids)
+    airtable = Airtable::Store.new(
+      database_id: ENV["AIRTABLE_DATABASE"],
+      api_key: ENV["AIRTABLE_API_KEY"]
+    )
+    wc = WooCommerce::Store.new(
+      url: ENV["WOOCOMMERCE_URL"],
+      key: ENV["WOOCOMMERCE_KEY"],
+      secret: ENV["WOOCOMMERCE_SECRET"]
+    )
+    wc.update_variable_product(airtable.products_by_id(ids))
+  end
 end
