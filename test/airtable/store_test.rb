@@ -50,4 +50,18 @@ class AirtableStoreTest < Minitest::Test
     assert_equal "579:590", product.woocommerce_id
     assert_equal "bees wax wraps sandwich-pouch", product.woocommerce_name
   end
+
+  def test_retrieve_products
+    stub_request(:get, "#{Airtable::Store::BASE_URL}/database-id/Categories")
+      .to_return(body: json_fixture("airtable_categories").to_json)
+
+    stub_request(:get, "#{Airtable::Store::BASE_URL}/database-id/Products?offset")
+      .to_return(body: json_fixture("airtable_products").to_json)
+
+    products = @airtable.products
+    assert_equal 100, products.size
+
+    product = products.find { |p| p.name == "Beeswax wrap" }
+    assert_equal "rec0r31fsA327CW2G", product.airtable_id
+  end
 end

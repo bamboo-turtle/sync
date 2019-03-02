@@ -39,6 +39,29 @@ module Airtable
       )
     end
 
+    def products
+      categories = self.categories.map { |c| [c.airtable_id, c] }.to_h
+
+      records = []
+      response = {}
+
+      begin
+        response = perform_request(Net::HTTP::Get.new("#{url}/#{Tables::PRODUCTS}?#{URI.encode_www_form(offset: response["offset"])}"))
+        records += response.fetch("records")
+      end while response["offset"]
+
+      records.map { |record|
+        fields = record.fetch("fields")
+
+        Product.new(
+          fields
+            .merge("airtable_id" => record.fetch("id"))
+            .merge("images" => Array(fields["images"]).map { |image| image.fetch("url") })
+            .merge("category" => categories.fetch(fields.fetch("category")[0]))
+        )
+      }
+    end
+
     private
 
     def perform_request(request)
