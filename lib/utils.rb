@@ -1,4 +1,21 @@
 module Utils
+  def self.prettify_name(name)
+    return if name.nil?
+
+    name
+      .gsub(/[-]/, " ")
+      .gsub(/\s{1,}/, " ")
+      .strip
+      .downcase
+      .capitalize
+  end
+
+  def self.extract_cup_weight(text)
+    return if text.nil? || text.strip == ""
+    weight = text[/cup\D+(\d+)\s?g/i, 1]
+    weight && weight.to_i
+  end
+
   def self.clean_up_description(string)
     return if string.nil? || string.empty?
 
