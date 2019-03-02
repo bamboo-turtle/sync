@@ -44,8 +44,4 @@ class Category
   def update(data)
     self.class.new(@data.merge(data))
   end
-
-  def to_csv
-    @data.values_at(*HEADERS).to_csv
-  end
 end
