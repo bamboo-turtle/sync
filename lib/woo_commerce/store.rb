@@ -10,12 +10,10 @@ module WooCommerce
       @api = api.new(*api_params)
     end
 
-    def update_product(product)
+    def update_simple_product(product)
       params = {
         product: {
           title: product.name,
-          type: "simple",
-          status: "draft",
           price: product.price,
           short_description: product.short_description,
           description: "<pre>#{product.long_description}</pre>",

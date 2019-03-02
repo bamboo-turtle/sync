@@ -8,15 +8,13 @@ class WooCommerceStoreTest < Minitest::Test
     @wc = WooCommerce::Store.new(api: @api, url: :url, key: :key, secret: :secret)
   end
 
-  def test_update_product
+  def test_update_simple_product
     product = build_product("woocommerce_id" => "product-1")
 
     response = Minitest::Mock.new
     response.expect(:parsed_response, { "product" => { "id" => "product-1" } })
     @api.expect(:put, response, ["products/product-1", { product: {
       title: product.name,
-      type: "simple",
-      status: "draft",
       price: product.price,
       short_description: product.short_description,
       description: "<pre>#{product.long_description}</pre>",
@@ -24,7 +22,7 @@ class WooCommerceStoreTest < Minitest::Test
       categories: [product.category.woocommerce_id],
       images: [{ src: product.images[0], position: 0 }],
     }}])
-    updated_product = @wc.update_product(product)
+    updated_product = @wc.update_simple_product(product)
     assert_equal "product-1", updated_product.woocommerce_id
   end
 
