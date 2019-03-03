@@ -1,3 +1,6 @@
+require "net/http"
+require "json"
+
 module Airtable
   class Store
     BASE_URL = "https://api.airtable.com/v0"
