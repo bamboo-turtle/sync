@@ -14,7 +14,7 @@ module WooCommerce
       params = {
         product: {
           title: product.name,
-          price: product.price,
+          regular_price: product.price,
           short_description: product.short_description,
           description: "<pre>#{product.long_description}</pre>",
           enable_html_description: true,

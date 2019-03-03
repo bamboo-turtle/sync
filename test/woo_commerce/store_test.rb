@@ -15,7 +15,7 @@ class WooCommerceStoreTest < Minitest::Test
     response.expect(:parsed_response, { "product" => { "id" => "product-1" } })
     @api.expect(:put, response, ["products/product-1", { product: {
       title: product.name,
-      price: product.price,
+      regular_price: product.price,
       short_description: product.short_description,
       description: "<pre>#{product.long_description}</pre>",
       enable_html_description: true,
