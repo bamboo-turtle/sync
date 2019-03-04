@@ -1,7 +1,7 @@
 class Category
   ATTRS = %w(name image parent woocommerce_id woocommerce_name eposnow_name airtable_id)
 
-  def initialize(data)
+  def initialize(data = {})
     if (data.keys - ATTRS).any?
       raise ArgumentError, "Unexpected keys: #{data.keys - ATTRS}"
     end

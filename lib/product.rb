@@ -3,7 +3,7 @@ class Product
 
   attr_reader :category
 
-  def initialize(data)
+  def initialize(data = {})
     if (data.keys - ATTRS).any?
       raise ArgumentError, "Unexpected keys: #{data.keys - ATTRS}"
     end
