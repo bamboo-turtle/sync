@@ -26,7 +26,7 @@ module WooCommerce
           ],
           variations: @product.variations.map { |variation|
             {
-              regular_price: variation.price,
+              regular_price: variation.display_price,
               image: { src: variation.images[0], position: 0 },
               attributes: [
                 {

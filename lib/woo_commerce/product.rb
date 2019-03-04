@@ -14,7 +14,7 @@ module WooCommerce
 
     def params
       {
-        product: product_params.merge(regular_price: @product.price)
+        product: product_params.merge(regular_price: @product.display_price)
       }
     end
   end
