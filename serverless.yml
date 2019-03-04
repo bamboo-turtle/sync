@@ -1,0 +1,41 @@
+service: sync-products
+
+provider:
+  name: aws
+  runtime: ruby2.5
+  environment:
+    WOOCOMMERCE_URL: ${env:WOOCOMMERCE_URL}
+    WOOCOMMERCE_KEY: ${env:WOOCOMMERCE_KEY}
+    WOOCOMMERCE_SECRET: ${env:WOOCOMMERCE_SECRET}
+    AIRTABLE_DATABASE: ${env:AIRTABLE_DATABASE}
+    AIRTABLE_API_KEY: ${env:AIRTABLE_API_KEY}
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "sns:*"
+      Resource: "*"
+
+functions:
+  sync-products:
+    handler: handler.sync_products
+    events:
+      - schedule:
+          rate: cron(0 0 * * ? *)
+  sync-simple-product:
+    handler: handler.sync_simple_product
+    events:
+      - sns: sync-simple-product
+
+  sync-variable-product:
+    handler: handler.sync_variable_product
+    events:
+      - sns: sync-variable-product
+
+package:
+  exclude:
+    - bin/**
+    - test/**
+    - Gemfile*
+    - .bundle/**
+    - lib/utils.rb
+    - lib/word_matcher.rb

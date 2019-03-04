@@ -1,2 +1,4 @@
 .bundle
 .env
+.serverless
+vendor
