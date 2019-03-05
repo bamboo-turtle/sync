@@ -39,13 +39,13 @@ end
 def sync_simple_product(event:, context:)
   event["Records"].each do |record|
     id = JSON.parse(record["Sns"]["Message"])["id"]
-    Synchroniser.synchronise_simple_product(id)
+    Synchroniser.new.sync_simple_product(id)
   end
 end
 
 def sync_variable_product(event:, context:)
   event["Records"].each do |record|
     ids = JSON.parse(record["Sns"]["Message"])["ids"]
-    Synchroniser.synchronise_variable_product(ids)
+    Synchroniser.new.sync_variable_product(ids)
   end
 end

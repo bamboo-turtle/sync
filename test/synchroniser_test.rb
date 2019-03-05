@@ -12,7 +12,7 @@ class SynchroniserTest < Minitest::Test
       airtable.expect(:product, product, [airtable_id])
       wc.expect(:update_simple_product, product, [product])
       airtable.expect(:sync_product, product, [product])
-      Synchroniser.synchronise_simple_product(airtable_id)
+      Synchroniser.new.sync_simple_product(airtable_id)
     end
   end
 
@@ -27,7 +27,7 @@ class SynchroniserTest < Minitest::Test
       end
       airtable.expect(:sync_product, products[0], [products[0]])
       airtable.expect(:sync_product, products[1], [products[1]])
-      Synchroniser.synchronise_variable_product(airtable_ids)
+      Synchroniser.new.sync_variable_product(airtable_ids)
     end
   end
 
