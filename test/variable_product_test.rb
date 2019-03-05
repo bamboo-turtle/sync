@@ -64,4 +64,17 @@ class VariableProductTest < Minitest::Test
     ])
     assert product.out_of_sync?
   end
+
+  def test_enabled
+    product = VariableProduct.new([
+      simple_product("enabled" => true),
+      simple_product("enabled" => true),
+    ])
+    assert product.enabled
+    product = VariableProduct.new([
+      simple_product("enabled" => true),
+      simple_product("enabled" => false),
+    ])
+    refute product.enabled
+  end
 end

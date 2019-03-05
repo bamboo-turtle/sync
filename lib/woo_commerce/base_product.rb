@@ -1,7 +1,13 @@
 module WooCommerce
   module BaseProduct
+    module Statuses
+      DRAFT = "draft"
+      PUBLISH = "publish"
+    end
+
     def product_params
       {
+        status: status,
         title: @product.name,
         short_description: @product.short_description,
         description: description,
@@ -9,6 +15,10 @@ module WooCommerce
         categories: categories,
         images: images,
       }
+    end
+
+    def status
+      @product.enabled ? Statuses::PUBLISH : Statuses::DRAFT
     end
 
     def description

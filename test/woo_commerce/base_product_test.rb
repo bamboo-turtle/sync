@@ -17,4 +17,12 @@ class WooCommerceBaseProductTest < Minitest::Test
     product = ProductAdapter.new(Product.new("long_description" => "Description"))
     assert_equal "<pre>Description</pre>", product.product_params[:description]
   end
+
+  def test_status
+    product = ProductAdapter.new(Product.new)
+    assert_equal ProductAdapter::Statuses::DRAFT, product.product_params[:status]
+
+    product = ProductAdapter.new(Product.new("enabled" => true))
+    assert_equal ProductAdapter::Statuses::PUBLISH, product.product_params[:status]
+  end
 end

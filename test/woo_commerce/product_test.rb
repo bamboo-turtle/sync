@@ -19,6 +19,7 @@ class WooCommerceProductTest < Minitest::Test
     wc_product = WooCommerce::Product.new(product)
     params = {
       product: {
+        status: "draft",
         title: product.name,
         regular_price: product.price,
         short_description: product.short_description,

@@ -41,6 +41,10 @@ class VariableProduct
     variations[0].woocommerce_id.split(":")[0]
   end
 
+  def enabled
+    @variations.all?(&:enabled)
+  end
+
   def out_of_sync?
     @variations.any?(&:out_of_sync?)
   end

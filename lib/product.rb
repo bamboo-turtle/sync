@@ -1,5 +1,5 @@
 class Product
-  PRODUCT_ATTRS = %w(name variant short_description long_description price images cup_weight display_price_quantity category)
+  PRODUCT_ATTRS = %w(name variant short_description long_description price images cup_weight display_price_quantity category enabled)
   AUX_ATTRS = %w(eposnow_name eposnow_category woocommerce_id woocommerce_name woocommerce_categories airtable_id last_sync_data)
   ATTRS = PRODUCT_ATTRS + AUX_ATTRS
 

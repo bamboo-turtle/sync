@@ -37,6 +37,7 @@ class WooCommerceVariableProductTest < Minitest::Test
     wc_product = WooCommerce::VariableProduct.new(product)
     params = {
       product: {
+        status: "draft",
         title: product.name,
         short_description: product.short_description,
         description: "<pre>#{product.long_description}</pre>",
