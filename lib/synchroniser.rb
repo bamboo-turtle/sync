@@ -12,7 +12,7 @@ module Synchroniser
       key: ENV["WOOCOMMERCE_KEY"],
       secret: ENV["WOOCOMMERCE_SECRET"]
     )
-    wc.update_simple_product(airtable.product(id))
+    airtable.sync_product(wc.update_simple_product(airtable.product(id)))
   end
 
   def self.synchronise_variable_product(ids)
@@ -25,6 +25,9 @@ module Synchroniser
       key: ENV["WOOCOMMERCE_KEY"],
       secret: ENV["WOOCOMMERCE_SECRET"]
     )
-    wc.update_variable_product(VariableProduct.new(airtable.products_by_id(ids)))
+    wc
+      .update_variable_product(VariableProduct.new(airtable.products_by_id(ids)))
+      .variations
+      .each { |variation| airtable.sync_product(variation) }
   end
 end

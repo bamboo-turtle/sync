@@ -1,5 +1,7 @@
 class Product
-  ATTRS = %w(name variant short_description long_description price images cup_weight display_price_quantity category eposnow_name eposnow_category woocommerce_id woocommerce_name woocommerce_categories airtable_id)
+  PRODUCT_ATTRS = %w(name variant short_description long_description price images cup_weight display_price_quantity category)
+  AUX_ATTRS = %w(eposnow_name eposnow_category woocommerce_id woocommerce_name woocommerce_categories airtable_id last_sync_data)
+  ATTRS = PRODUCT_ATTRS + AUX_ATTRS
 
   attr_reader :category
 
@@ -43,6 +45,20 @@ class Product
     if value = @data["woocommerce_id"]
       value.to_s
     end
+  end
+
+  def out_of_sync?
+    sync_data != last_sync_data
+  end
+
+  def sync_data
+    @data
+      .slice(*PRODUCT_ATTRS)
+      .merge("category" => category&.woocommerce_id)
+  end
+
+  def last_sync_data
+    @data["last_sync_data"]
   end
 
   def update(data)

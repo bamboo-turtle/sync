@@ -49,4 +49,17 @@ class VariableProductTest < Minitest::Test
     assert_equal %w(airtable-id-1 airtable-id-2), product.airtable_ids
     assert_equal "1", product.woocommerce_id
   end
+
+  def test_out_of_sync
+    product = VariableProduct.new([
+      Product.new("name" => "Test").yield_self { |p| p.update("last_sync_data" => p.sync_data) },
+      Product.new("name" => "Test").yield_self { |p| p.update("last_sync_data" => p.sync_data) },
+    ])
+    refute product.out_of_sync?
+    product = VariableProduct.new([
+      Product.new("name" => "Test", "last_sync_data" => { "name" => "Test" }),
+      Product.new("name" => "Test"),
+    ])
+    assert product.out_of_sync?
+  end
 end

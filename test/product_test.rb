@@ -14,4 +14,15 @@ class ProductTest < Minitest::Test
     product = Product.new("price" => 0.00123, "display_price_quantity" => 100)
     assert_equal 0.123, product.display_price
   end
+
+  def test_out_of_sync
+    product = Product.new("name" => "Test product")
+    assert product.out_of_sync?
+
+    product = product.update("last_sync_data" => product.sync_data)
+    refute product.out_of_sync?
+
+    product = product.update("short_description" => "Short desc")
+    assert product.out_of_sync?
+  end
 end

@@ -40,4 +40,8 @@ class VariableProduct
   def woocommerce_id
     variations[0].woocommerce_id.split(":")[0]
   end
+
+  def out_of_sync?
+    @variations.any?(&:out_of_sync?)
+  end
 end

@@ -3,41 +3,45 @@ require "lib/synchroniser"
 
 class SynchroniserTest < Minitest::Test
   def test_synchronise_simple_product
-    wc = Minitest::Mock.new
-    airtable = Minitest::Mock.new
     product = :product
     airtable_id = "airtable-id"
 
-    WooCommerce::Store.stub(:new, wc) do
-      Airtable::Store.stub(:new, airtable) do
-        airtable.expect(:product, product, [airtable_id])
-        wc.expect(:update_simple_product, nil, [product])
-        Synchroniser.synchronise_simple_product(airtable_id)
-      end
+    stub_external_apis do |wc, airtable|
+      airtable.expect(:product, product, [airtable_id])
+      wc.expect(:update_simple_product, product, [product])
+      airtable.expect(:sync_product, product, [product])
+      Synchroniser.synchronise_simple_product(airtable_id)
     end
-
-    airtable.verify
-    wc.verify
   end
 
   def test_synchronise_variable_product
+    products = [:product1, :product2]
+    variable_product = Minitest::Mock.new
+    variable_product.expect(:variations, products)
+    airtable_ids = %w(id-1 id-2)
+
+    stub_external_apis do |wc, airtable|
+      VariableProduct.stub(:new, variable_product) do
+        airtable.expect(:products_by_id, products, [airtable_ids])
+        wc.expect(:update_variable_product, variable_product, [variable_product])
+        airtable.expect(:sync_product, products[0], [products[0]])
+        airtable.expect(:sync_product, products[1], [products[1]])
+        Synchroniser.synchronise_variable_product(airtable_ids)
+      end
+    end
+  end
+
+  def stub_external_apis
     wc = Minitest::Mock.new
     airtable = Minitest::Mock.new
-    products = [:product1, :product2]
-    variable_product = :variable_product
-    airtable_ids = %w(id-1 id-2)
 
     WooCommerce::Store.stub(:new, wc) do
       Airtable::Store.stub(:new, airtable) do
-        VariableProduct.stub(:new, variable_product) do
-          airtable.expect(:products_by_id, products, [airtable_ids])
-          wc.expect(:update_variable_product, nil, [variable_product])
-          Synchroniser.synchronise_variable_product(airtable_ids)
-        end
+        yield wc, airtable
       end
     end
 
-    airtable.verify
     wc.verify
+    airtable.verify
   end
 end

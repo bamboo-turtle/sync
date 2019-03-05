@@ -24,14 +24,14 @@ def sync_products(event:, context:)
 
   variable, simple = airtable.products.partition(&:variant)
 
-  VariableProduct.map(variable).each do |product|
+  VariableProduct.map(variable).select(&:out_of_sync?).each do |product|
     sns.publish(
       topic_arn: topics.fetch(VARIABLE_PRODUCT_TOPIC),
       message: { ids: product.airtable_ids }.to_json,
     )
   end
 
-  simple.each do |product|
+  simple.select(&:out_of_sync?).each do |product|
     sns.publish(
       topic_arn: topics.fetch(SIMPLE_PRODUCT_TOPIC),
       message: { id: product.airtable_id }.to_json,

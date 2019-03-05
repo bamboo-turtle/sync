@@ -76,6 +76,16 @@ class AirtableStoreTest < Minitest::Test
     assert products[1].airtable_id
   end
 
+  def test_sync_product
+    stub_categories_request
+    product = Product.new("name" => "Test", "airtable_id" => "id-1")
+    stub_request(:put, "#{Airtable::Store::BASE_URL}/database-id/Products/id-1")
+      .with(body: { "fields" => { "last_sync_data" => product.sync_data.to_json } })
+      .to_return(body: json_fixture("airtable_products").fetch("records")[0].to_json)
+    updated_product = @airtable.sync_product(product)
+    assert updated_product.airtable_id
+  end
+
   def stub_categories_request
     stub_request(:get, "#{Airtable::Store::BASE_URL}/database-id/Categories")
       .to_return(body: json_fixture("airtable_categories").to_json)
