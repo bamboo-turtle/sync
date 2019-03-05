@@ -46,7 +46,7 @@ class WordMatcher
       .strip
       .split(" ")
       .map(&:downcase)
-      .then { |words| words + words.map { |word| word.sub(/s$/, "") } }
+      .yield_self { |words| words + words.map { |word| word.sub(/s$/, "") } }
       .uniq
   end
 end
