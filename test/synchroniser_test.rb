@@ -2,6 +2,8 @@ require File.join(Dir.pwd, "test", "test_helper")
 require "lib/synchroniser"
 
 class SynchroniserTest < Minitest::Test
+  include ProductHelpers
+
   def test_synchronise_simple_product
     product = :product
     airtable_id = "airtable-id"
@@ -16,18 +18,16 @@ class SynchroniserTest < Minitest::Test
 
   def test_synchronise_variable_product
     products = [:product1, :product2]
-    variable_product = Minitest::Mock.new
-    variable_product.expect(:variations, products)
     airtable_ids = %w(id-1 id-2)
 
     stub_external_apis do |wc, airtable|
-      VariableProduct.stub(:new, variable_product) do
-        airtable.expect(:products_by_id, products, [airtable_ids])
-        wc.expect(:update_variable_product, variable_product, [variable_product])
-        airtable.expect(:sync_product, products[0], [products[0]])
-        airtable.expect(:sync_product, products[1], [products[1]])
-        Synchroniser.synchronise_variable_product(airtable_ids)
+      airtable.expect(:products_by_id, products, [airtable_ids])
+      wc.expect(:update_variable_product, VariableProduct.new(products)) do |p|
+        p.variations == products
       end
+      airtable.expect(:sync_product, products[0], [products[0]])
+      airtable.expect(:sync_product, products[1], [products[1]])
+      Synchroniser.synchronise_variable_product(airtable_ids)
     end
   end
 
