@@ -21,7 +21,6 @@ class Synchroniser
       .each { |variation| airtable.sync_product(variation) }
   end
 
-
   private
 
   def airtable

@@ -18,11 +18,19 @@ end
 
 module ProductHelpers
   def simple_product(attrs = {})
-    Product.new({ "name" => "Test product"}.merge(attrs))
+    Product.new({ "name" => "Test product", "airtable_id" => "id-1" }.merge(attrs))
   end
 
-  def variation
-    Product.new("name" => "Test", "variant" => "Variant")
+  def variation(attrs = {})
+    Product.new({
+      "name" => "Test",
+      "variant" => "Variant",
+      "airtable_id" => "id-2"
+    }.merge(attrs))
+  end
+
+  def variable_product
+    VariableProduct.new([variation])
   end
 
   def synced_product(product)
