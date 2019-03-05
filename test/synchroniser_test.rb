@@ -31,6 +31,44 @@ class SynchroniserTest < Minitest::Test
     end
   end
 
+  def test_simple_products_for_sync
+    products = [
+      variation,
+      simple_product,
+      synced_product(variation),
+      synced_product(simple_product),
+    ]
+    sync = Synchroniser.new
+    stub_external_apis do |wc, airtable|
+      airtable.expect(:products, products)
+      assert_equal products.values_at(1), sync.simple_products_for_sync
+    end
+  end
+
+  def test_variable_products_for_sync
+    products = [
+      variation,
+      simple_product,
+      synced_product(variation),
+      synced_product(simple_product),
+    ]
+    sync = Synchroniser.new
+    stub_external_apis do |wc, airtable|
+      airtable.expect(:products, products)
+      assert_equal products.values_at(*0, 2), sync.variable_products_for_sync.flat_map(&:variations)
+    end
+
+    products = [
+      synced_product(variation),
+      synced_product(variation),
+    ]
+    sync = Synchroniser.new
+    stub_external_apis do |wc, airtable|
+      airtable.expect(:products, products)
+      assert_empty sync.variable_products_for_sync
+    end
+  end
+
   def stub_external_apis
     wc = Minitest::Mock.new
     airtable = Minitest::Mock.new

@@ -15,3 +15,17 @@ module Fixtures
     JSON.parse(File.read(File.join("test", "fixtures", "#{name}.json")))
   end
 end
+
+module ProductHelpers
+  def simple_product(attrs = {})
+    Product.new({ "name" => "Test product"}.merge(attrs))
+  end
+
+  def variation
+    Product.new("name" => "Test", "variant" => "Variant")
+  end
+
+  def synced_product(product)
+    product.update("last_sync_data" => product.sync_data)
+  end
+end

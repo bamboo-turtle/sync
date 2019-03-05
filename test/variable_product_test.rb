@@ -1,6 +1,8 @@
 require File.join(Dir.pwd, "test", "test_helper")
 
 class VariableProductTest < Minitest::Test
+  include ProductHelpers
+
   def test_mapping
     products = [
       Product.new("airtable_id" => "1", "name" => "Product 1", "variant" => "Variant 1"),
@@ -52,13 +54,13 @@ class VariableProductTest < Minitest::Test
 
   def test_out_of_sync
     product = VariableProduct.new([
-      Product.new("name" => "Test").yield_self { |p| p.update("last_sync_data" => p.sync_data) },
-      Product.new("name" => "Test").yield_self { |p| p.update("last_sync_data" => p.sync_data) },
+      synced_product(simple_product),
+      synced_product(simple_product),
     ])
     refute product.out_of_sync?
     product = VariableProduct.new([
-      Product.new("name" => "Test", "last_sync_data" => { "name" => "Test" }),
-      Product.new("name" => "Test"),
+      synced_product(simple_product),
+      simple_product
     ])
     assert product.out_of_sync?
   end
