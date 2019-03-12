@@ -59,7 +59,7 @@ module Airtable
 
     def sync_product(product)
       categories = self.categories.map { |c| [c.airtable_id, c] }.to_h
-      request = Net::HTTP::Put.new("#{url}/#{Tables::PRODUCTS}/#{product.airtable_id}")
+      request = Net::HTTP::Patch.new("#{url}/#{Tables::PRODUCTS}/#{product.airtable_id}")
       request.body = { "fields" => { "last_sync_data" => product.sync_data.to_json } }.to_json
       build_product(categories, perform_request(request))
     end
