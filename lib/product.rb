@@ -37,10 +37,6 @@ class Product
     end
   end
 
-  def display_price
-    price * display_price_quantity
-  end
-
   def woocommerce_id
     if value = @data["woocommerce_id"]
       value.to_s

@@ -14,6 +14,14 @@ module WooCommerce
         enable_html_description: true,
         categories: categories,
         images: images,
+        attributes: [
+          {
+            name: "display_price_quantity",
+            visible: false,
+            variation: false,
+            options: @product.display_price_quantity,
+          }
+        ]
       }
     end
 

@@ -49,8 +49,13 @@ class WooCommerceVariableProductTest < Minitest::Test
         ],
         attributes: [
           {
+            name: "display_price_quantity",
+            visible: false,
+            variation: false,
+            options: product.display_price_quantity,
+          },
+          {
             name: "Option",
-            position: 0,
             visible: true,
             variation: true,
             options: product.variants,

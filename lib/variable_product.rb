@@ -29,6 +29,10 @@ class VariableProduct
     variations.flat_map(&:images).uniq
   end
 
+  def display_price_quantity
+    variations[0].display_price_quantity
+  end
+
   def variants
     variations.map(&:variant)
   end

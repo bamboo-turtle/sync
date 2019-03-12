@@ -13,12 +13,13 @@ module WooCommerce
     end
 
     def params
+      product_params = self.product_params
+
       {
         product: product_params.merge(
-          attributes: [
+          attributes: product_params[:attributes] + [
             {
               name: "Option",
-              position: 0,
               visible: true,
               variation: true,
               options: @product.variants,
@@ -26,7 +27,7 @@ module WooCommerce
           ],
           variations: @product.variations.map { |variation|
             {
-              regular_price: variation.display_price,
+              regular_price: variation.price,
               image: { src: variation.images[0], position: 0 },
               attributes: [
                 {

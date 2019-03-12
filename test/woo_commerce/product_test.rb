@@ -27,6 +27,14 @@ class WooCommerceProductTest < Minitest::Test
         enable_html_description: true,
         categories: [product.category.woocommerce_id],
         images: [{ src: product.images[0], position: 0 }],
+        attributes: [
+          {
+            name: "display_price_quantity",
+            visible: false,
+            variation: false,
+            options: product.display_price_quantity,
+          }
+        ]
       }
     }
     assert_equal params, wc_product.params

@@ -50,6 +50,7 @@ class VariableProductTest < Minitest::Test
     assert_equal ["Variant 1", "Variant 2"], product.variants
     assert_equal %w(airtable-id-1 airtable-id-2), product.airtable_ids
     assert_equal "1", product.woocommerce_id
+    assert_equal 1, product.display_price_quantity
   end
 
   def test_out_of_sync
