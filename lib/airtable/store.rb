@@ -72,7 +72,6 @@ module Airtable
 
       http = Net::HTTP.new(url.hostname, url.port)
       http.use_ssl = true
-      http.set_debug_output($stdout)
       JSON.parse(http.start { http.request(request) }.body)
     end
 
