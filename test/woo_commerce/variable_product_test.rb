@@ -4,9 +4,12 @@ require "lib/woo_commerce/variable_product"
 class WooCommerceVariableProductTest < Minitest::Test
   def test_id
     product = WooCommerce::VariableProduct.new(
-      VariableProduct.new(
-        [Product.new("woocommerce_id" => "product-1:varint-1")]
-      )
+      VariableProduct.new([
+        Product.new(
+          "woocommerce_id" => "variant-1",
+          "woocommerce_parent_id" => "product-1"
+        )
+      ])
     )
     assert_equal "product-1", product.id
   end
@@ -21,7 +24,8 @@ class WooCommerceVariableProductTest < Minitest::Test
         "short_description" => "Short description",
         "long_description" => "Long description",
         "images" => ["http://example.com/image1.jpg"],
-        "woocommerce_id" => "product-1:variant-1",
+        "woocommerce_id" => "variant-1",
+        "woocommerce_parent_id" => "product-1",
       }),
       Product.new({
         "name" => "Test product",
@@ -31,7 +35,8 @@ class WooCommerceVariableProductTest < Minitest::Test
         "short_description" => "Short description",
         "long_description" => "Long description",
         "images" => ["http://example.com/image2.jpg"],
-        "woocommerce_id" => "product-1:variant-2",
+        "woocommerce_id" => "variant-2",
+        "woocommerce_parent_id" => "product-1",
       })
     ])
     wc_product = WooCommerce::VariableProduct.new(product)

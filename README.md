@@ -29,7 +29,8 @@ category | Category |
 enabled | boolean | Display product on the site?
 eposnow_name | string |
 eposnow_category | string | Used for initial mapping
-woocommerce_id | string | ID of the product in WooCommerce. Variable products have ID in this format: `parent-id:variant-id`
+woocommerce_id | string | ID of the product in WooCommerce
+woocommerce_parent_id | string | ID of the parent product in WooCommerce (only applicable to variants)
 woocommerce_name | string | Used for initial mapping
 woocommerce_categories | string | Used for initial mapping
 last_sync_data | text | Snapshot of the data at the most recent synchronisation in JSON

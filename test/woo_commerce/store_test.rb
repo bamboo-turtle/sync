@@ -23,6 +23,7 @@ class WooCommerceStoreTest < Minitest::Test
     WooCommerce::Product.stub(:new, wc_product) do
       updated_product = @wc.update_simple_product(product)
       assert_equal "product-1", updated_product.woocommerce_id
+      refute updated_product.woocommerce_parent_id
     end
   end
 
@@ -46,8 +47,14 @@ class WooCommerceStoreTest < Minitest::Test
 
     WooCommerce::VariableProduct.stub(:new, wc_product) do
       updated_product = @wc.update_variable_product(product)
-      assert_equal "product-1:variation-1", updated_product.variations[0].woocommerce_id
-      assert_equal "product-1:variation-2", updated_product.variations[1].woocommerce_id
+      updated_product.variations[0].tap do |variation|
+        assert_equal "product-1", variation.woocommerce_parent_id
+        assert_equal "variation-1", variation.woocommerce_id
+      end
+      updated_product.variations[1].tap do |variation|
+        assert_equal "product-1", variation.woocommerce_parent_id
+        assert_equal "variation-2", variation.woocommerce_id
+      end
     end
   end
 end

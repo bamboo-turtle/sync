@@ -26,7 +26,8 @@ class VariableProductTest < Minitest::Test
         "short_description" => "Short description",
         "long_description" => "Long description",
         "images" => ["http://example.com/image1.jpg"],
-        "woocommerce_id" => "1:2",
+        "woocommerce_id" => "2",
+        "woocommerce_parent_id" => "1",
         "airtable_id" => "airtable-id-1",
       ),
       Product.new(
@@ -37,7 +38,8 @@ class VariableProductTest < Minitest::Test
         "short_description" => "Short description",
         "long_description" => "Long description",
         "images" => ["http://example.com/image2.jpg"],
-        "woocommerce_id" => "1:3",
+        "woocommerce_id" => "3",
+        "woocommerce_parent_id" => "1",
         "airtable_id" => "airtable-id-2",
       )
     ])

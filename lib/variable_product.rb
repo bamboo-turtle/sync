@@ -42,7 +42,7 @@ class VariableProduct
   end
 
   def woocommerce_id
-    variations[0].woocommerce_id.split(":")[0]
+    variations[0].woocommerce_parent_id
   end
 
   def enabled

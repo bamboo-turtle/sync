@@ -23,7 +23,10 @@ module WooCommerce
       response = @api.put("products/#{variable_product.id}", variable_product.params).parsed_response.fetch("product")
       ::VariableProduct.new(
         product.variations.zip(response.fetch("variations")).map { |variation, variation_response|
-          variation.update("woocommerce_id" => [response.fetch("id"), variation_response.fetch("id")].join(":"))
+          variation.update(
+            "woocommerce_id" => variation_response.fetch("id"),
+            "woocommerce_parent_id" => response.fetch("id"),
+          )
         }
       )
     end

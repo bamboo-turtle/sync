@@ -1,6 +1,6 @@
 class Product
   PRODUCT_ATTRS = %w(name variant short_description long_description price images cup_weight display_price_quantity category enabled)
-  AUX_ATTRS = %w(eposnow_name eposnow_category woocommerce_id woocommerce_name woocommerce_categories airtable_id last_sync_data)
+  AUX_ATTRS = %w(eposnow_name eposnow_category woocommerce_id woocommerce_parent_id woocommerce_name woocommerce_categories airtable_id last_sync_data)
   ATTRS = PRODUCT_ATTRS + AUX_ATTRS
 
   attr_reader :category
@@ -39,6 +39,12 @@ class Product
 
   def woocommerce_id
     if value = @data["woocommerce_id"]
+      value.to_s
+    end
+  end
+
+  def woocommerce_parent_id
+    if value = @data["woocommerce_parent_id"]
       value.to_s
     end
   end
