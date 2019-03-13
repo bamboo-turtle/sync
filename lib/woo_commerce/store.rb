@@ -7,7 +7,7 @@ module WooCommerce
     def initialize(api: WooCommerce::API, url:, key:, secret:, debug: false)
       api_params = [url, key, secret]
       if debug
-        params << { httparty_args: { debug_output: $stdout } }
+        api_params << { httparty_args: { debug_output: $stdout } }
       end
       @api = api.new(*api_params)
     end
