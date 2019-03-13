@@ -19,12 +19,11 @@ module WooCommerce
     end
 
     def update_variable_product(product)
-      wc_product = VariableProduct.new(product)
-      response = @api.put("products/#{wc_product.id}", wc_product.params)
-      wc_product = response.parsed_response.fetch("product")
+      variable_product = VariableProduct.new(product)
+      response = @api.put("products/#{variable_product.id}", variable_product.params).parsed_response.fetch("product")
       ::VariableProduct.new(
-        product.variations.zip(wc_product.fetch("variations")).map { |variation, wc_variation|
-          variation.update("woocommerce_id" => [wc_product.fetch("id"), wc_variation.fetch("id")].join(":"))
+        product.variations.zip(response.fetch("variations")).map { |variation, variation_response|
+          variation.update("woocommerce_id" => [response.fetch("id"), variation_response.fetch("id")].join(":"))
         }
       )
     end

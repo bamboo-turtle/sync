@@ -27,6 +27,7 @@ module WooCommerce
           ],
           variations: @product.variations.map { |variation|
             {
+              id: variation.woocommerce_id.split(":").last,
               regular_price: variation.price,
               image: { src: variation.images[0], position: 0 },
               attributes: [
