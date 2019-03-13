@@ -29,7 +29,7 @@ module WooCommerce
             {
               id: variation.woocommerce_id,
               regular_price: variation.price,
-              image: { src: variation.images[0], position: 0 },
+              image: [{ src: variation.images[0], position: 0 }],
               attributes: [
                 {
                   option: variation.variant,

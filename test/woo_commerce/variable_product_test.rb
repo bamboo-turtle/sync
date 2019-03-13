@@ -70,7 +70,7 @@ class WooCommerceVariableProductTest < Minitest::Test
           {
             id: "variant-1",
             regular_price: product.variations[0].price,
-            image: { src: product.variations[0].images[0], position: 0 },
+            image: [{ src: product.variations[0].images[0], position: 0 }],
             attributes: [
               {
                 option: product.variations[0].variant,
@@ -81,7 +81,7 @@ class WooCommerceVariableProductTest < Minitest::Test
           {
             id: "variant-2",
             regular_price: product.variations[1].price,
-            image: { src: product.variations[1].images[0], position: 0 },
+            image: [{ src: product.variations[1].images[0], position: 0 }],
             attributes: [
               {
                 option: product.variations[1].variant,
