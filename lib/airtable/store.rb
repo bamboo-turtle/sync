@@ -10,9 +10,10 @@ module Airtable
       CATEGORIES = "Categories"
     end
 
-    def initialize(database_id:, api_key:)
+    def initialize(database_id:, api_key:, debug: false)
       @database_id = database_id
       @api_key = api_key
+      @debug = debug
     end
 
     def categories
@@ -72,6 +73,7 @@ module Airtable
 
       http = Net::HTTP.new(url.hostname, url.port)
       http.use_ssl = true
+      http.set_debug_output($stdout) if @debug
       JSON.parse(http.start { http.request(request) }.body)
     end
 

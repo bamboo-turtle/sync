@@ -26,7 +26,8 @@ class Synchroniser
   def airtable
     @airtable ||= Airtable::Store.new(
       database_id: ENV["AIRTABLE_DATABASE"],
-      api_key: ENV["AIRTABLE_API_KEY"]
+      api_key: ENV["AIRTABLE_API_KEY"],
+      debug: ENV["DEBUG"],
     )
   end
 
@@ -34,7 +35,8 @@ class Synchroniser
     @wc ||= WooCommerce::Store.new(
       url: ENV["WOOCOMMERCE_URL"],
       key: ENV["WOOCOMMERCE_KEY"],
-      secret: ENV["WOOCOMMERCE_SECRET"]
+      secret: ENV["WOOCOMMERCE_SECRET"],
+      debug: ENV["DEBUG"],
     )
   end
 
