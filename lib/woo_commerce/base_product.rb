@@ -13,7 +13,6 @@ module WooCommerce
         description: description,
         enable_html_description: true,
         categories: categories,
-        images: images,
         attributes: [
           {
             name: "display_price_quantity",
@@ -22,7 +21,7 @@ module WooCommerce
             options: @product.display_price_quantity,
           }
         ]
-      }
+      }.merge(image_params)
     end
 
     def status
@@ -37,6 +36,16 @@ module WooCommerce
 
     def categories
       Array(@product.category).map(&:woocommerce_id)
+    end
+
+    def image_params
+      if @product.images_out_of_sync?
+        {
+          images: images
+        }
+      else
+        {}
+      end
     end
 
     def images

@@ -53,14 +53,14 @@ class Product
     sync_data != last_sync_data
   end
 
+  def images_out_of_sync?
+    (last_sync_data || {})["images"] != images
+  end
+
   def sync_data
     @data
       .slice(*PRODUCT_ATTRS)
       .merge("category" => category&.woocommerce_id)
-  end
-
-  def last_sync_data
-    @data["last_sync_data"]
   end
 
   def update(data)

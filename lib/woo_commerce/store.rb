@@ -1,6 +1,7 @@
 require "woocommerce_api"
 require "lib/woo_commerce/product"
 require "lib/woo_commerce/variable_product"
+require "lib/woo_commerce/variation"
 
 module WooCommerce
   class Store

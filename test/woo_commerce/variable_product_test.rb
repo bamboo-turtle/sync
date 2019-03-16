@@ -1,5 +1,4 @@
 require File.join(Dir.pwd, "test", "test_helper")
-require "lib/woo_commerce/variable_product"
 
 class WooCommerceVariableProductTest < Minitest::Test
   def test_id

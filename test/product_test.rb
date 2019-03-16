@@ -1,7 +1,8 @@
 require File.join(Dir.pwd, "test", "test_helper")
-require "lib/product"
 
 class ProductTest < Minitest::Test
+  include ProductHelpers
+
   def test_display_price_quantity
     product = Product.new
     assert_equal 1, product.display_price_quantity
@@ -19,5 +20,16 @@ class ProductTest < Minitest::Test
 
     product = product.update("short_description" => "Short desc")
     assert product.out_of_sync?
+  end
+
+  def test_images_of_sync
+    product = simple_product
+    assert product.images_out_of_sync?
+
+    product = synced_product(simple_product)
+    refute product.images_out_of_sync?
+
+    product = synced_product(simple_product).update("images" => [])
+    assert product.images_out_of_sync?
   end
 end

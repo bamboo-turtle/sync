@@ -14,7 +14,11 @@ end
 
 module ProductHelpers
   def simple_product(attrs = {})
-    Product.new({ "name" => "Test product", "airtable_id" => "id-1" }.merge(attrs))
+    Product.new({
+      "name" => "Test product",
+      "images"=> %w(https://example.com/image1.jpg),
+      "airtable_id" => "id-1"
+    }.merge(attrs))
   end
 
   def variation(attrs = {})

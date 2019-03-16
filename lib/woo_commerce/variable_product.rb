@@ -25,21 +25,13 @@ module WooCommerce
               options: @product.variants,
             }
           ],
-          variations: @product.variations.map { |variation|
-            {
-              id: variation.woocommerce_id,
-              regular_price: variation.price,
-              image: [{ src: variation.images[0], position: 0 }],
-              attributes: [
-                {
-                  option: variation.variant,
-                  name: "Option",
-                }
-              ]
-            }
-          }
+          variations: variations.map(&:params)  
         )
       }
+    end
+
+    def variations
+      @product.variations.map { |variation| Variation.new(variation) }
     end
   end
 end

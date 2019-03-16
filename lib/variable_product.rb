@@ -52,4 +52,8 @@ class VariableProduct
   def out_of_sync?
     @variations.any?(&:out_of_sync?)
   end
+
+  def images_out_of_sync?
+    @variations.any?(&:images_out_of_sync?)
+  end
 end
