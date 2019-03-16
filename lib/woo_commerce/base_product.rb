@@ -49,7 +49,11 @@ module WooCommerce
     end
 
     def images
-      Array(@product.images).map.with_index { |url, i| { src: url, position: i } }
+      if @product.images.any?
+        Array(@product.images).map.with_index { |url, i| { src: url, position: i } }
+      else
+        ""
+      end
     end
   end
 end

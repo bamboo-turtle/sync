@@ -32,4 +32,9 @@ class WooCommerceVariationTest < Minitest::Test
     variation = WooCommerce::Variation.new(synced_product(simple_product))
     refute variation.params[:image]
   end
+
+  def test_no_images
+    variation = WooCommerce::Variation.new(simple_product("images" => []))
+    assert_equal "", variation.params[:image]
+  end
 end

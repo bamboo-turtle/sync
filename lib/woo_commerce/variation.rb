@@ -19,9 +19,19 @@ module WooCommerce
 
     def image_params
       if @product.images_out_of_sync?
-        { image: [{ src: @product.images[0], position: 0 }] }
+        { image: image }
       else
         {}
+      end
+    end
+
+    private
+
+    def image
+      if @product.images[0]
+        [{ src: @product.images[0], position: 0 }]
+      else
+        ""
       end
     end
   end

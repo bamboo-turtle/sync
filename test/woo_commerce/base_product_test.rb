@@ -28,6 +28,11 @@ class WooCommerceBaseProductTest < Minitest::Test
     assert_equal ProductAdapter::Statuses::PUBLISH, product.product_params[:status]
   end
 
+  def test_no_images
+    product = build_product("images" => [])
+    assert_equal "", product.product_params[:images]
+  end
+
   def test_update_images_only_when_they_change
     product = build_product
     assert product.product_params[:images]
