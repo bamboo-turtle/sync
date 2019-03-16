@@ -17,16 +17,18 @@ module Airtable
     end
 
     def categories
-      response = perform_request(Net::HTTP::Get.new("#{url}/#{Tables::CATEGORIES}"))
-      response.fetch("records").map { |record|
-        fields = record.fetch("fields").slice(*Category::ATTRS)
+      @categories ||= begin
+        response = perform_request(Net::HTTP::Get.new("#{url}/#{Tables::CATEGORIES}"))
+        response.fetch("records").map { |record|
+          fields = record.fetch("fields").slice(*Category::ATTRS)
 
-        Category.new(
-          fields
-            .merge("airtable_id" => record.fetch("id"))
-            .merge("image" => fields["image"] && fields["image"][0].fetch("url"))
-        )
-      }
+          Category.new(
+            fields
+              .merge("airtable_id" => record.fetch("id"))
+              .merge("image" => fields["image"] && fields["image"][0].fetch("url"))
+          )
+        }
+      end
     end
 
     def product(id)
