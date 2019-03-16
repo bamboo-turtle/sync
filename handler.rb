@@ -1,9 +1,6 @@
-require "lib/product"
-require "lib/category"
-require "lib/variable_product"
-require "lib/synchroniser"
 require "aws-sdk-sns"
 require "json"
+require "sync"
 
 SIMPLE_PRODUCT_TOPIC = "sync-simple-product"
 VARIABLE_PRODUCT_TOPIC = "sync-variable-product"

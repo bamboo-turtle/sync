@@ -4,11 +4,7 @@ Bundler.setup(:default, :test)
 require "minitest/autorun"
 require "webmock/minitest"
 
-$:.unshift(Dir.pwd)
-
-require "lib/category"
-require "lib/product"
-require "lib/variable_product"
+require File.join(Dir.pwd, "sync")
 
 module Fixtures
   def json_fixture(name)
