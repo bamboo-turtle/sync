@@ -55,6 +55,23 @@ class VariableProductTest < Minitest::Test
     assert_equal 1, product.display_price_quantity
   end
 
+  def test_images_have_unique_filenames
+    product = VariableProduct.new([
+      Product.new(
+        "images" => %w(
+          http://example.com/1/image1.jpg
+        )
+      ),
+      Product.new(
+        "images" => %w(
+          http://example.com/2/image1.jpg
+          http://example.com/2/image2.jpg
+        )
+      )
+    ])
+    assert_equal %w(http://example.com/1/image1.jpg http://example.com/2/image2.jpg), product.images
+  end
+
   def test_out_of_sync
     product = VariableProduct.new([
       synced_product(simple_product),

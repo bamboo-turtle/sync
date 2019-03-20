@@ -26,7 +26,9 @@ class VariableProduct
   end
 
   def images
-    variations.flat_map(&:images).uniq
+    variations
+      .flat_map(&:images)
+      .uniq { |url| url.split(/\//).last }
   end
 
   def display_price_quantity
